@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: #faf5f5;
+}
+
+/* Custom Sidebar Styles */
+.custom-sidebar {
+    position: fixed;
+    inset: 7px;
+    margin-left: 3px;
+    width: 256px; /* Default width */
+    height: 97vh;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 30px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1050;
+}
+
+.custom-sidebar .custom-sidebar-head {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.custom-user-img img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 3px;
+}
+
+.custom-user-details .custom-title, 
+.custom-menu .custom-title {
+    font-size: 10px;
+    font-weight: 500;
+    color: #757575;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.custom-user-details .custom-name {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.custom-nav {
+    flex: 1;
+}
+
+.custom-menu ul li {
+    position: relative;
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.custom-menu ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #757575;
+    text-decoration: none;
+    padding: 12px 8px;
+    border-radius: 8px;
+    transition: all 0.3s;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflowing content */
+    text-overflow: ellipsis;
+}
+
+.custom-menu ul li > a:hover,
+.custom-menu ul li.custom-active > a {
+    color: #000;
+    background-color: #f6f6f6;
+}
+
+.custom-menu ul li .custom-icon {
+    font-size: 20px;
+}
+
+.custom-menu ul li .custom-text {
+    flex: 1;
+}
+
+.custom-menu ul li .custom-arrow {
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.custom-menu ul li.custom-active .custom-arrow {
+    transform: rotate(180deg);
+}
+
+.custom-menu .custom-sub-menu {
+    display: none;
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-top: 5px;
+    border-left: 1px solid #f6f6f6;
+}
+
+.custom-menu .custom-sub-menu li a {
+    padding: 10px 8px;
+    font-size: 12px;
+}
+
+.custom-menu:not(:last-child) {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f6f6f6;
+}
+
+.custom-menu-btn {
+    position: absolute;
+    right: -39px;
+    top: 3.5%;
+    width: 29px;
+    height: 29px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+    color: #757575;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.custom-menu-btn:hover i {
+    color: #000;
+}
+
+.custom-menu-btn i {
+    transition: all 0.3s;
+}
+
+.custom-sidebar.custom-active {
+    width: 92px; /* Width when sidebar is collapsed */
+}
+
+.custom-sidebar.custom-active .custom-menu-btn i {
+    transform: rotate(180deg);
+}
+
+.custom-sidebar.custom-active .custom-user-details {
+    display: none;
+}
+
+.custom-sidebar.custom-active .custom-menu .custom-title {
+    text-align: center;
+}
+
+.custom-sidebar.custom-active .custom-menu ul li .custom-arrow {
+    display: none;
+}
+
+.custom-sidebar.custom-active .custom-menu > ul > li > a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-sidebar.custom-active .custom-menu > ul > li > a .custom-text {
+    position: absolute;
+    left: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.custom-sidebar.custom-active .custom-menu .custom-sub-menu {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 200px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 1px solid #f6f6f6;
+    background-color: #fff;
+    box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+/* END SIDEBAR */
+
+
+/*---MAIN---*/
+.custom-main {
+    padding: 20px;
+    position: absolute;
+    padding: 40px;
+    inset: 7px;
+    width: calc(100% - 295px);
+    left: 280px;
+    height: 97vh;
+    transition: 0.3s;
+    border: 1px solid black;
+}
+.custom-main.custom-active {
+    width: calc(100% - 135px);
+    left: 120px;
+}
+
+/*PAGINAS*/
+.grid-container {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 0.5fr 0.9fr 1.6fr 1fr 0.6fr 1.4fr 1fr 1.4fr 0.6fr 1fr 1.6fr 0.9fr 0.5fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 20px 0px; 
+    grid-template-areas: 
+      ". . . b1 b1 b1 b1 b1 b1 b1 . . ."
+      ". . b2 b2 b2 b2 . b3 b3 b3 b3 . ."
+      ". b4 b4 b4 b4 b4 b4 b4 b4 b4 b4 b4 ."; 
+    inset: 7px;
+    width: 100%;
+    border-radius: 30px;
+}
+.box {
+    background-color: #fff;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+}
+.box:hover {
+    transform:scale(0.97);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.b4 { grid-area: b4; }
+.b2 { grid-area: b2; }
+.b3 { grid-area: b3; }
+.b1 { grid-area: b1; }
+
+
+/*MEDIA QUERYS*/
+
+@media screen and (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: repeat(8, 1fr); /* Ajusta el número de columnas */
+        grid-template-areas: 
+          "b1 b1 b1 b1 b1 b1 b1 b1"
+          "b2 b2 b2 b2 b2 b2 b2 b2"
+          "b3 b3 b3 b3 b3 b3 b3 b3"
+          "b4 b4 b4 b4 b4 b4 b4 b4";
+      }
+  
+}
+
+@media screen and (max-width: 576px) {
+    .custom-sidebar{
+        z-index: 9999;
+    }
+    .custom-sidebar.custom-active {
+        left: -98px;
+    }
+    .custom-menu-btn {
+        right: -50px;
+        height: 40px;
+        width: 40px;
+        transition: all 0.5s;
+    }
+    .custom-menu-btn i {
+        font-size: 20px;
+    }
+    .custom-main {
+        width: calc(100% - 295px);
+        left: 280px;
+    }
+    .custom-main {
+        width: calc(100% - 25px);
+        left: 10px;
+    }
+    .custom-main.custom-active{
+        width: calc(100% - 25px);
+        left: 10px;
+    }
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr); /* Ajusta el número de columnas */
+        grid-template-areas: 
+          "b1 b1 b1 b1"
+          "b2 b2 b2 b2"
+          "b3 b3 b3 b3"
+          "b4 b4 b4 b4";
+    }
+}
