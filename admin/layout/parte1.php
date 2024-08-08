@@ -37,6 +37,10 @@ if(isset($_SESSION['sesion_email'])) {
     <!-- STYLESHEET -->
     <link rel="stylesheet" href="<?=APP_URL;?>../public/dist/css/adminlte.min.css">
     <link rel="stylesheet" href="<?=APP_URL;?>../public/css/admin-style.css">
+    <!-- Data Tables -->
+    <link rel="stylesheet" href="<?=APP_URL;?>/public/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="<?=APP_URL;?>/public/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="<?=APP_URL;?>/public/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 
     <title><?=APP_NAME;?></title>
 </head>
@@ -69,7 +73,7 @@ if(isset($_SESSION['sesion_email'])) {
                 </li>
                 <li>
                     <a href="#">
-                        <i class="custom-icon bx bxs-group"></i>
+                        <i class="custom-icon bi bi-diagram-3-fill"></i>
                         <span class="custom-text">Roles</span>
                         <i class="custom-arrow bx bx-chevron-down"></i>
                     </a>
@@ -83,9 +87,17 @@ if(isset($_SESSION['sesion_email'])) {
                 </li>
                 <li>
                     <a href="#">
-                        <i class="custom-icon bx bx-calendar-check"></i>
-                        <span class="custom-text">Permissions</span>
+                        <i class="custom-icon bi bi-people-fill"></i>
+                        <span class="custom-text">Usuarios</span>
+                        <i class="custom-arrow bx bx-chevron-down"></i>
                     </a>
+                    <ul class="custom-sub-menu">
+                        <li>
+                            <a href="<?=APP_URL;?>/admin/usuarios">
+                                <span class="custom-text">Listado de usuarios</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <a href="#">

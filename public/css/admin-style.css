@@ -216,7 +216,6 @@ body{
     left: 280px;
     height: 97vh;
     transition: 0.3s;
-    border: 1px solid black;
 }
 .custom-main.custom-active {
     width: calc(100% - 135px);
