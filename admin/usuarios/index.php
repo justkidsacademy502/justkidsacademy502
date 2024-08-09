@@ -21,13 +21,14 @@ include("../layout/parte1.php");
                     </div>
                 </div>
                 <div class="card-body">
-                  <table id="example1" class="table table-striped table-bordered table-hover table-sm">
-                    <thead>
+                <table id="example1" class="table table-striped table-bordered table-hover table-sm">
+                   <thead>
                       <tr>
                          <th><center>Nro</center></th>
                          <th><center>Nombres del usuario</center></th>
                          <th><center>Rol</center></th>
                          <th><center>Email</center></th>
+                         <th><center>Fecha de creación</center></th>
                          <th><center>Estado</center></th>
                          <th><center>Acciones</center></th>
                       </tr>
@@ -49,12 +50,12 @@ include("../layout/parte1.php");
                          <div class="btn-group" role="group" aria-label="Basic example">
                              <a href="show.php?id=<?=$id_usuario;?>" type="button" class="btn btn-primary"><i class="bi bi-eye"></i></a>
                              <a href="edit.php?id=<?=$id_usuario;?>" type="button" class="btn btn-success"><i class="bi bi-pencil"></i></a>
-                             <form action="<?=APP_URL;?>/app/controllers/roles/delete.php" onclick="preguntar(event)" method="post" id="miFormulario<?=$id_usuario;?>">
-                              <input type="text" name="id_rol" value="<?=$id_usuario;?>" hidden>
+                             <form action="<?=APP_URL;?>/app/controllers/usuarios/delete.php" onclick="preguntar<?=$id_usuario;?>(event)" method="post" id="miFormulario<?=$id_usuario;?>">
+                              <input type="text" name="id_usuario" value="<?=$id_usuario;?>" hidden>
                              <button type="submit" class="btn btn-danger" style="border-radius: 0px 5px 5px 0px;"><i class="bi bi-trash3"></i></button>
                              </form>
                              <script>
-                              function preguntar(event){
+                              function preguntar<?=$id_usuario;?>(event){
                                 event.preventDefault();
                                 swal.fire({
                                   title: 'Eliminar registro',
@@ -80,7 +81,7 @@ include("../layout/parte1.php");
                       }   
                       ?>    
                     </tbody>
-                  </table>
+                </table>
                 </div>
             </div>
         </div>  

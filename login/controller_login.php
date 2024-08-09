@@ -18,7 +18,7 @@ foreach ($usuarios as $usuario) {
    $contador = $contador +1;
 }
 
-if( ($contador>0) && ($password === $password_tabla) ) {
+if( ($contador>0) && (password_verify($password,$password_tabla) )) {
     //echo "correcto";
     session_start();
     $_SESSION['sesion_email'] = $email;
