@@ -26,6 +26,7 @@ if(isset($_SESSION['sesion_email'])) {
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- ICONS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <!-- Font Awesome Icons -->
@@ -54,10 +55,10 @@ if(isset($_SESSION['sesion_email'])) {
     </div>
     <div class="custom-sidebar-head">
         <div class="custom-user-img">
-            <img src="../public/img/logo_home.png" alt="#">
+            <img src="<?=APP_URL;?>/public/img/logo_home.png" alt="logo">
         </div>
         <div class="custom-user-details">
-            <p class="custom-title">Student</p>
+            <p class="custom-title">User</p>
             <p class="custom-name"><?=$nombre_sesion_usuario;?></p>
         </div>
     </div>
@@ -67,13 +68,33 @@ if(isset($_SESSION['sesion_email'])) {
             <ul>
                 <li class="custom-menu-active">
                     <a href="<?=APP_URL;?>/admin/index.php">
-                        <i class="custom-icon bx bx-home-alt-2"></i>
+                        <lord-icon target="a" loading="interaction" style="height:30px;width:30px;" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/63-home.json">
+                            <img alt="" loading="eager" src="https://media.lordicon.com/icons/wired/flat/63-home.svg">
+                        </lord-icon>
                         <span class="custom-text">Home</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <i class="custom-icon bi bi-diagram-3-fill"></i>
+                        <lord-icon target="a" loading="interaction" style="height:30px;width:30px;" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/40-cogs.json">
+                            <img alt="" loading="eager" src="https://media.lordicon.com/icons/wired/flat/40-cogs.svg">
+                        </lord-icon>
+                        <span class="custom-text">Configuración</span>
+                        <i class="custom-arrow bx bx-chevron-down"></i>
+                    </a>
+                    <ul class="custom-sub-menu">
+                        <li>
+                            <a href="<?=APP_URL;?>/admin/configuraciones">
+                                <span class="custom-text" style="font-size: 10px;">Listado de Configuraciones</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <lord-icon target="a" loading="interaction" style="height:30px;width:30px;" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/1007-organization.json">
+                            <img alt="" loading="eager" src="https://media.lordicon.com/icons/wired/flat/1007-organization.svg">
+                        </lord-icon>
                         <span class="custom-text">Roles</span>
                         <i class="custom-arrow bx bx-chevron-down"></i>
                     </a>
@@ -87,7 +108,9 @@ if(isset($_SESSION['sesion_email'])) {
                 </li>
                 <li>
                     <a href="#">
-                        <i class="custom-icon bi bi-people-fill"></i>
+                        <lord-icon target="a" loading="interaction" style="height:30px;width:30px;" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/314-three-avatars-icon-calm.json">
+                            <img alt="" loading="eager" src="https://media.lordicon.com/icons/wired/flat/314-three-avatars-icon-calm.svg">
+                        </lord-icon>
                         <span class="custom-text">Usuarios</span>
                         <i class="custom-arrow bx bx-chevron-down"></i>
                     </a>
@@ -101,20 +124,19 @@ if(isset($_SESSION['sesion_email'])) {
                 </li>
                 <li>
                     <a href="#">
-                        <i class="custom-icon bx bx-message-detail"></i>
-                        <span class="custom-text">Questions</span>
+                        <lord-icon target="a" loading="interaction" style="height:30px;width:30px;" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/1524-bricks-toy.json">
+                            <img alt="" loading="eager" src="https://media.lordicon.com/icons/wired/flat/1524-bricks-toy.svg">
+                        </lord-icon>
+                        <span class="custom-text">Niveles</span>
+                        <i class="custom-arrow bx bx-chevron-down"></i>
                     </a>
-                </li>
-            </ul>
-        </div>
-        <div class="custom-menu">
-            <p class="custom-title">Settings</p>
-            <ul>
-                <li>
-                    <a href="#">
-                        <i class="custom-icon bx bx-lock-open-alt"></i>
-                        <span class="custom-text">Change Password</span>
-                    </a>
+                    <ul class="custom-sub-menu">
+                        <li>
+                            <a href="<?=APP_URL;?>/admin/niveles">
+                                <span class="custom-text">Listado de niveles</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>
@@ -124,7 +146,9 @@ if(isset($_SESSION['sesion_email'])) {
         <ul>
             <li>
                 <a href="<?=APP_URL;?>../login/logout.php">
-                    <i class="custom-icon bx bx-log-out"></i>
+                <lord-icon target="a" loading="interaction" style="height:30px;width:30px;" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/2129-login.json">
+                    <img alt="" loading="eager" src="https://media.lordicon.com/icons/wired/flat/2129-login.svg">
+                </lord-icon>
                     <span class="custom-text">Log Out</span>
                 </a>
             </li>

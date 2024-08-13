@@ -221,7 +221,6 @@ body{
     width: calc(100% - 135px);
     left: 120px;
 }
-
 /*PAGINAS*/
 .grid-container {
     display: grid; 
