@@ -5,16 +5,14 @@ include("../../../app/config.php");
 $gestion_id = $_POST['gestion_id'];
 $nivel = $_POST['nivel'];
 $turno = $_POST['turno'];
-$horario = $_POST['horario'];
 
 $sentencia = $pdo->prepare('INSERT INTO niveles
-(gestion_id,nivel,turno,horario, fyh_creacion, estado)
-VALUES ( :gestion_id,:nivel,:turno,:horario,:fyh_creacion,:estado)');
+(gestion_id,nivel,turno,fyh_creacion, estado)
+VALUES ( :gestion_id,:nivel,:turno,:fyh_creacion,:estado)');
 
 $sentencia->bindParam(':gestion_id',$gestion_id);
 $sentencia->bindParam(':nivel',$nivel);
 $sentencia->bindParam(':turno',$turno);
-$sentencia->bindParam(':horario',$horario);
 $sentencia->bindParam('fyh_creacion',$fechahora);
 $sentencia->bindParam('estado',$estado_de_registro);
 

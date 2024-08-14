@@ -12,7 +12,6 @@ foreach ($niveles as $nivele) {
     $gestion = $nivele['gestion'];
     $nivel = $nivele['nivel'];
     $turno = $nivele['turno'];
-    $horario = $nivele['horario'];
     $fyh_creacion = $nivele['fyh_creacion'];
     $estado = $nivele['estado'];
 

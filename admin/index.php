@@ -4,6 +4,7 @@ include("../admin/layout/parte1.php");
 include("../app/controllers/roles/listado_de_roles.php");
 include("../app/controllers/usuarios/listado_de_usuarios.php");
 include("../app/controllers/niveles/listado_de_niveles.php");
+include("../app/controllers/grados/listado_de_grados.php");
 ?>
 
 
@@ -33,7 +34,10 @@ include("../app/controllers/niveles/listado_de_niveles.php");
                  <i class="fas"><i class="custom-icon bi bi-diagram-3-fill"></i></i>
              </div>
              <a href="<?=APP_URL?>/admin/roles" class="small-box-footer">
-             Más información <i class="fas fa-arrow-circle-right"></i>
+             Más información 
+             <lord-icon target="div" colors="primary:white" style="height:18px;width:18px;padding-top:3px;" trigger="hover" src="https://media.lordicon.com/icons/system/solid/161-trending-flat.json">
+                <img alt="" loading="eager" src="https://media.lordicon.com/icons/system/solid/161-trending-flat.svg">
+             </lord-icon></i>
              </a>
          </div>
         </div>
@@ -55,7 +59,10 @@ include("../app/controllers/niveles/listado_de_niveles.php");
                  <i class="fas"><i class="custom-icon bi bi-people-fill"></i></i>
              </div>
              <a href="<?=APP_URL?>/admin/usuarios" class="small-box-footer">
-             Más información <i class="fas fa-arrow-circle-right"></i>
+             Más información 
+             <lord-icon target="div" colors="primary:white" style="height:18px;width:18px;padding-top:3px;" trigger="hover" src="https://media.lordicon.com/icons/system/solid/161-trending-flat.json">
+                <img alt="" loading="eager" src="https://media.lordicon.com/icons/system/solid/161-trending-flat.svg">
+             </lord-icon></i>
              </a>
          </div>
         </div>
@@ -77,7 +84,36 @@ include("../app/controllers/niveles/listado_de_niveles.php");
                  <i class="fas"><i class="bi bi-bar-chart-fill"></i></i>
              </div>
              <a href="<?=APP_URL?>/admin/niveles" class="small-box-footer">
-             Más información <i class="fas fa-arrow-circle-right"></i>
+             Más información 
+             <lord-icon target="div" colors="primary:white" style="height:18px;width:18px;padding-top:3px;" trigger="hover" src="https://media.lordicon.com/icons/system/solid/161-trending-flat.json">
+                <img alt="" loading="eager" src="https://media.lordicon.com/icons/system/solid/161-trending-flat.svg">
+             </lord-icon></i>
+             </a>
+         </div>
+        </div>
+
+        <div class="col-lg-3 col-6">
+
+         <div class="small-box bg-red">
+             <div class="inner">
+                <?php
+                $contador_grados =0;
+                foreach ($grados as $grado) {
+                    $contador_grados = $contador_grados + 1;
+                }
+                ?>
+                 <h3><?=$contador_grados;?></h3>
+                 <p>Grados registrados</p>
+             </div>
+             <div class="icon">
+                 <i class="fas"><i class="bi bi-layers-fill"></i></i>
+             </div>
+             <a href="<?=APP_URL?>/admin/grados" class="small-box-footer">
+             Más información
+             <lord-icon target="div" colors="primary:white" style="height:18px;width:18px;padding-top:3px;" trigger="hover" src="https://media.lordicon.com/icons/system/solid/161-trending-flat.json">
+                <img alt="" loading="eager" colors="primary:white" src="https://media.lordicon.com/icons/system/solid/161-trending-flat.svg">
+             </lord-icon>
+            </i>
              </a>
          </div>
         </div>

@@ -67,14 +67,6 @@ include("../../app/controllers/configuraciones/gestion/listado_de_gestiones.php"
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="">Horarios</label>
-                                <input type="text" name="horario" value="<?=$horario;?>" class="form-control">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
                                 <button type="submit" class="btn btn-success">Actualizar</button>

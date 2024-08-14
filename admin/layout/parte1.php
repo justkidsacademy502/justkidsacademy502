@@ -9,7 +9,7 @@ if(isset($_SESSION['sesion_email'])) {
    
    $datos_sesion_usuarios = $query_sesion->fetchAll(PDO::FETCH_ASSOC);
    foreach ($datos_sesion_usuarios as $datos_sesion_usuario) {
-    $nombre_sesion_usuario = $datos_sesion_usuario['nombres'];
+    $nombre_sesion_usuario = $datos_sesion_usuario['email'];
    }
 }else {
     //echo "El usuario no paso por el login";
@@ -134,6 +134,22 @@ if(isset($_SESSION['sesion_email'])) {
                         <li>
                             <a href="<?=APP_URL;?>/admin/niveles">
                                 <span class="custom-text">Listado de niveles</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <lord-icon target="a" loading="interaction" style="height:30px;width:30px;" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/12-layers.json">
+                            <img alt="" loading="eager" src="https://media.lordicon.com/icons/wired/flat/12-layers.svg">
+                        </lord-icon>
+                        <span class="custom-text">Grados</span>
+                        <i class="custom-arrow bx bx-chevron-down"></i>
+                    </a>
+                    <ul class="custom-sub-menu">
+                        <li>
+                            <a href="<?=APP_URL;?>/admin/grados">
+                                <span class="custom-text">Listado de grados</span>
                             </a>
                         </li>
                     </ul>
