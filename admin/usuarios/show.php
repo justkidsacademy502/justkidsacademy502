@@ -11,7 +11,7 @@ include("../../app/controllers/usuarios/datos_del_usuario.php");
 
 <div class="custom-main custom-sidebar-active">
     <div class="row">
-       <h1>Usuario: <?=$nombres;?></h1> 
+       <h1>Usuario: <?=$email;?></h1> 
     </div>
     <br>
     <div class="row">
@@ -26,12 +26,6 @@ include("../../app/controllers/usuarios/datos_del_usuario.php");
                             <div class="form-group">
                                 <label for="">Nombre del Rol</label>
                                 <p><?=$nombre_rol;?></p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="">Nombres del usuario</label>
-                                <p><?=$nombres;?></p>
                             </div>
                         </div>
                         <div class="col-md-4">

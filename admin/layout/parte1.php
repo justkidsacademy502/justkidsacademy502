@@ -92,7 +92,7 @@ if(isset($_SESSION['sesion_email'])) {
                 </li>
                 <li>
                     <a href="#">
-                        <lord-icon target="a" loading="interaction" style="height:30px;width:30px;" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/1007-organization.json">
+                        <lord-icon target="a" colors="primary:#fae6d1,secondary:#66a1ee,tertiary:#3a3347,quaternary:#000000" style="height:30px;width:30px;" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/1007-organization.json">
                             <img alt="" loading="eager" src="https://media.lordicon.com/icons/wired/flat/1007-organization.svg">
                         </lord-icon>
                         <span class="custom-text">Roles</span>
@@ -108,7 +108,7 @@ if(isset($_SESSION['sesion_email'])) {
                 </li>
                 <li>
                     <a href="#">
-                        <lord-icon target="a" loading="interaction" style="height:30px;width:30px;" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/314-three-avatars-icon-calm.json">
+                        <lord-icon target="a" colors="primary:#66a1ee,secondary:#fae6d1" style="height:30px;width:30px;" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/314-three-avatars-icon-calm.json">
                             <img alt="" loading="eager" src="https://media.lordicon.com/icons/wired/flat/314-three-avatars-icon-calm.svg">
                         </lord-icon>
                         <span class="custom-text">Usuarios</span>
@@ -118,6 +118,22 @@ if(isset($_SESSION['sesion_email'])) {
                         <li>
                             <a href="<?=APP_URL;?>/admin/usuarios">
                                 <span class="custom-text">Listado de usuarios</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <lord-icon target="a" colors="primary:#000000,secondary:#fae6d1,tertiary:#66ee78,quaternary:#ffffff" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/310-avatar-icon-approved.json">
+                            <img alt="" loading="eager" src="https://media.lordicon.com/icons/wired/flat/310-avatar-icon-approved.svg">
+                        </lord-icon>
+                        <span class="custom-text">Administrativos</span>
+                        <i class="custom-arrow bx bx-chevron-down"></i>
+                    </a>
+                    <ul class="custom-sub-menu">
+                        <li>
+                            <a href="<?=APP_URL;?>/admin/administrativos">
+                                <span class="custom-text">Personal Administrativos</span>
                             </a>
                         </li>
                     </ul>
@@ -140,8 +156,8 @@ if(isset($_SESSION['sesion_email'])) {
                 </li>
                 <li>
                     <a href="#">
-                        <lord-icon target="a" loading="interaction" style="height:30px;width:30px;" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/12-layers.json">
-                            <img alt="" loading="eager" src="https://media.lordicon.com/icons/wired/flat/12-layers.svg">
+                        <lord-icon target="a" style="height:30px;width:30px;" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/978-project-management.json">
+                            <img alt="" loading="lazy" src="https://media.lordicon.com/icons/wired/flat/978-project-management.svg">
                         </lord-icon>
                         <span class="custom-text">Grados</span>
                         <i class="custom-arrow bx bx-chevron-down"></i>
@@ -154,6 +170,22 @@ if(isset($_SESSION['sesion_email'])) {
                         </li>
                     </ul>
                 </li>
+                <li>
+                    <a href="#">
+                        <lord-icon target="a" style="height:30px;width:30px;" colors="secondary:#f2e2d9" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/734-id-business-card-1.json">
+                            <img alt="" loading="lazy" src="https://media.lordicon.com/icons/wired/flat/734-id-business-card-1.svg">
+                        </lord-icon>
+                        <span class="custom-text">Coaches</span>
+                        <i class="custom-arrow bx bx-chevron-down"></i>
+                    </a>
+                    <ul class="custom-sub-menu">
+                        <li>
+                            <a href="<?=APP_URL;?>/admin/docentes">
+                                <span class="custom-text">Listado de coaches</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
@@ -162,9 +194,9 @@ if(isset($_SESSION['sesion_email'])) {
         <ul>
             <li>
                 <a href="<?=APP_URL;?>../login/logout.php">
-                <lord-icon target="a" loading="interaction" style="height:30px;width:30px;" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/2129-login.json">
-                    <img alt="" loading="eager" src="https://media.lordicon.com/icons/wired/flat/2129-login.svg">
-                </lord-icon>
+                    <lord-icon target="a" loading="interaction" style="height:30px;width:30px;" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/1725-exit-sign.json">
+                        <img alt="" loading="eager" src="https://media.lordicon.com/icons/wired/flat/1725-exit-sign.svg">
+                    </lord-icon>
                     <span class="custom-text">Log Out</span>
                 </a>
             </li>

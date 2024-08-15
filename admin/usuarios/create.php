@@ -38,12 +38,6 @@ include("../../app/controllers/roles/listado_de_roles.php");
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label for="">Nombres del usuario</label>
-                                <input type="text" name="nombres" class="form-control" require>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
                                 <label for="">Email</label>
                                 <input type="text" name="email" class="form-control" require>
                             </div>

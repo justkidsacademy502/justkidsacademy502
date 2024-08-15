@@ -12,7 +12,7 @@ include("../../app/controllers/roles/listado_de_roles.php");
 
 <div class="custom-main custom-sidebar-active">
     <div class="row">
-       <h1>Modificar Usuario: <?=$nombres;?></h1> 
+       <h1>Modificar Usuario: <?=$email;?></h1> 
     </div>
     <br>
     <div class="row">
@@ -40,12 +40,6 @@ include("../../app/controllers/roles/listado_de_roles.php");
                                 </select>
                                 <a href="<?=APP_URL;?>/admin/roles/create.php" style="margin-left: 5px;" class="btn btn-success"><i class="bi bi-file-plus"></i></a>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="">Nombres del usuario</label>
-                                <input type="text" name="nombres" value="<?=$nombres;?>" class="form-control" require>
                             </div>
                         </div>
                         <div class="col-md-4">

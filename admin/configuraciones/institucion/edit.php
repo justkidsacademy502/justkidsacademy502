@@ -55,6 +55,7 @@ include("../../../app/controllers/configuraciones/institucion/datos_institucion.
                                         <br>
                                         <center>
                                         <img src="<?=APP_URL."/public/img/configuracion/".$logo;?>" width="100px" alt="">
+                                        <output id="list"></output>
                                         </center>
                                     </div>
                                 </div>
@@ -80,6 +81,7 @@ include("../../../app/controllers/configuraciones/institucion/datos_institucion.
 include('../../../layout/mensajes.php');
 include("../../layout/parte2.php");
 ?>
+
 
 <script>
     function archivo(evt) {

@@ -72,6 +72,7 @@ CREATE TABLE docentes (
 
     id_docente   INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     persona_id          INT (11) NOT NULL,
+    fecha_contratacion  VARCHAR (25) NOT NULL,
    
     fyh_creacion      DATETIME NULL,
     fyh_actualizacion DATETIME NULL,
