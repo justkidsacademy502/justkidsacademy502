@@ -6,6 +6,7 @@ include("../app/controllers/usuarios/listado_de_usuarios.php");
 include("../app/controllers/niveles/listado_de_niveles.php");
 include("../app/controllers/grados/listado_de_grados.php");
 include("../app/controllers/administrativos/listado_de_administrativos.php");
+include("../app/controllers/docentes/listado_de_docentes.php");
 ?>
 
 
@@ -150,12 +151,12 @@ include("../app/controllers/administrativos/listado_de_administrativos.php");
          <div class="small-box bg-indigo">
              <div class="inner">
                 <?php
-                $contador_administrativos =0;
-                foreach ($administrativos as $administrativo) {
-                    $contador_administrativos = $contador_administrativos + 1;
+                $contador_docentes =0;
+                foreach ($docentes as $docente) {
+                    $contador_docentes = $contador_docentes + 1;
                 }
                 ?>
-                 <h3><?=$contador_administrativos;?></h3>
+                 <h3><?=$contador_docentes;?></h3>
                  <p>Coaches registrados</p>
              </div>
              <div class="icon">

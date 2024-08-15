@@ -25,7 +25,7 @@ include("../layout/parte1.php");
                    <thead>
                       <tr>
                          <th><center>Nro</center></th>
-                         <th><center>Nombres del usuario</center></th>
+                         <th><center>Nombres del Coach</center></th>
                          <th><center>Rol</center></th>
                          <th><center>DPI</center></th>
                          <th><center>Email</center></th>
@@ -36,20 +36,20 @@ include("../layout/parte1.php");
                     </thead>
                     <tbody>
                     <?php
-                    $contador_administrativos = 0;
-                    foreach ($administrativos as $administrativo) {
-                      $id_administrativo = $administrativo['id_administrativo'];
-                      $contador_administrativos = $contador_administrativos +1; ?>
+                    $contador_docentes = 0;
+                    foreach ($docentes as $docente) {
+                      $id_docente = $docente['id_docente'];
+                      $contador_docentes = $contador_docentes +1; ?>
                     <tr>
-                       <td style="text-align: center;"><?=$contador_administrativos;?></td>
-                       <td><?=$administrativo['nombres']." ".$administrativo['apellidos'];?></td>
-                       <td><?=$administrativo['nombre_rol'];?></td>
-                       <td><?=$administrativo['dpi'];?></td>
-                       <td><?=$administrativo['email'];?></td>
-                       <td><?=$administrativo['celular'];?></td>
+                       <td style="text-align: center;"><?=$contador_docentes;?></td>
+                       <td><?=$docente['nombres']." ".$docente['apellidos'];?></td>
+                       <td><?=$docente['nombre_rol'];?></td>
+                       <td><?=$docente['dpi'];?></td>
+                       <td><?=$docente['email'];?></td>
+                       <td><?=$docente['celular'];?></td>
                        <td style="text-align: center;">
                         <?php
-                        if($administrativo['estado'] == "1") { ?>
+                        if($docente['estado'] == "1") { ?>
                              <button class="btn btn-success btn-sm" style="border-radius: 20px;" >ACTIVO</button>
                         <?php
                         }else { ?>
@@ -60,14 +60,14 @@ include("../layout/parte1.php");
                        </td>
                        <td style="text-align: center;">
                          <div class="btn-group" role="group" aria-label="Basic example">
-                             <a href="show.php?id=<?=$id_administrativo;?>" type="button" class="btn btn-primary"><i class="bi bi-eye"></i></a>
-                             <a href="edit.php?id=<?=$id_administrativo;?>" type="button" class="btn btn-success"><i class="bi bi-pencil"></i></a>
-                             <form action="<?=APP_URL;?>/app/controllers/usuarios/delete.php" onclick="preguntar<?=$id_administrativo;?>(event)" method="post" id="miFormulario<?=$id_administrativo;?>">
-                              <input type="text" name="id_usuario" value="<?=$id_administrativo;?>" hidden>
+                             <a href="show.php?id=<?=$id_docente;?>" type="button" class="btn btn-primary"><i class="bi bi-eye"></i></a>
+                             <a href="edit.php?id=<?=$id_docente;?>" type="button" class="btn btn-success"><i class="bi bi-pencil"></i></a>
+                             <form action="<?=APP_URL;?>/app/controllers/usuarios/delete.php" onclick="preguntar<?=$id_docente;?>(event)" method="post" id="miFormulario<?=$id_docente;?>">
+                              <input type="text" name="id_usuario" value="<?=$id_docente;?>" hidden>
                              <button type="submit" class="btn btn-danger" style="border-radius: 0px 5px 5px 0px;"><i class="bi bi-trash3"></i></button>
                              </form>
                              <script>
-                              function preguntar<?=$id_administrativo;?>(event){
+                              function preguntar<?=$id_docente;?>(event){
                                 event.preventDefault();
                                 swal.fire({
                                   title: 'Eliminar registro',
@@ -80,7 +80,7 @@ include("../layout/parte1.php");
                                   denyButtonText: 'Cancelar',
                                 }).then((result) =>  {
                                   if (result.isConfirmed) {
-                                    var form = $('#miFormulario<?=$id_administrativo;?>')
+                                    var form = $('#miFormulario<?=$id_docente;?>')
                                     form.submit();
                                   }
                                 });

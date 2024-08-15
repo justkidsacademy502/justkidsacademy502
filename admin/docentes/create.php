@@ -28,7 +28,7 @@ include("../../app/controllers/roles/listado_de_roles.php");
                                    <select name="rol_id" id="" class="form-control">
                                    <?php
                                    foreach ($roles as $role) { ?>
-                                       <option value="<?=$role['id_rol'];?>" <?=$role['nombre_rol']=="COACH" ? 'selected' : ''?> disabled><?=$role['nombre_rol'];?></option>
+                                       <option value="<?=$role['id_rol'];?>" <?=$role['nombre_rol']=="COACH" ? 'selected' : ''?>><?=$role['nombre_rol'];?></option>
                                    <?php
                                    }
                                    ?>
