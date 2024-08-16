@@ -37,7 +37,7 @@ if(isset($_SESSION['sesion_email'])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <!-- STYLESHEET -->
     <link rel="stylesheet" href="<?=APP_URL;?>../public/dist/css/adminlte.min.css">
-    <link rel="stylesheet" href="<?=APP_URL;?>../public/css/admin-style.css">
+    <link rel="stylesheet" href="<?=APP_URL;?>../public/css/admincss.css">
     <!-- Data Tables -->
     <link rel="stylesheet" href="<?=APP_URL;?>/public/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="<?=APP_URL;?>/public/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
@@ -55,7 +55,9 @@ if(isset($_SESSION['sesion_email'])) {
     </div>
     <div class="custom-sidebar-head">
         <div class="custom-user-img">
+            <a href="<?=APP_URL;?>/admin/index.php">
             <img src="<?=APP_URL;?>/public/img/logo_home.png" alt="logo">
+            </a>
         </div>
         <div class="custom-user-details">
             <p class="custom-title">User</p>
@@ -66,14 +68,6 @@ if(isset($_SESSION['sesion_email'])) {
         <div class="custom-menu">
             <p class="custom-title">Main</p>
             <ul>
-                <li class="custom-menu-active">
-                    <a href="<?=APP_URL;?>/admin/index.php">
-                        <lord-icon target="a" loading="interaction" style="height:30px;width:30px;" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/63-home.json">
-                            <img alt="" loading="eager" src="https://media.lordicon.com/icons/wired/flat/63-home.svg">
-                        </lord-icon>
-                        <span class="custom-text">Home</span>
-                    </a>
-                </li>
                 <li>
                     <a href="#">
                         <lord-icon target="a" loading="interaction" style="height:30px;width:30px;" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/40-cogs.json">
@@ -182,6 +176,27 @@ if(isset($_SESSION['sesion_email'])) {
                         <li>
                             <a href="<?=APP_URL;?>/admin/docentes">
                                 <span class="custom-text">Listado de coaches</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <lord-icon target="a" style="height:30px;width:30px;" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/529-boy-girl-children.json">
+                            <img alt="" loading="lazy" src="https://media.lordicon.com/icons/wired/flat/529-boy-girl-children.svg">
+                        </lord-icon>
+                        <span class="custom-text">Estudiantes</span>
+                        <i class="custom-arrow bx bx-chevron-down"></i>
+                    </a>
+                    <ul class="custom-sub-menu">
+                        <li>
+                            <a href="<?=APP_URL;?>/admin/inscripciones">
+                                <span class="custom-text">Inscripción</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?=APP_URL;?>/admin/estudiantes">
+                                <span class="custom-text">Listado de estudiantes</span>
                             </a>
                         </li>
                     </ul>
