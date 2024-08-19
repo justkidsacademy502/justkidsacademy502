@@ -193,3 +193,43 @@ CREATE TABLE grados (
 )ENGINE=InnoDB;
 INSERT INTO grados (nivel_id,curso,paralelo,fyh_creacion,estado)
 VALUES ('1','STARTERS-BLOCK 1','A','2024-07-29 11:30:10','1');
+
+
+CREATE TABLE materias (
+
+    id_materia                INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nombre_materia            VARCHAR (50) NOT NULL,
+    
+   
+    fyh_creacion      DATETIME NULL,
+    fyh_actualizacion DATETIME NULL,
+    estado            VARCHAR (11)
+
+
+)ENGINE=InnoDB;
+INSERT INTO materias (nombre_materia,fyh_creacion,estado)
+VALUES ('BLOQUE 1','2024-09-08 13:10:10','1');
+
+
+
+CREATE TABLE pagos (
+
+    id_pago             INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    estudiante_id       INT (11) NOT NULL,
+    mes_pagado          VARCHAR (50) NOT NULL,
+    monto_pagado        VARCHAR (15) NOT NULL,
+    descuento_pago      VARCHAR (50) NOT NULL,
+    fecha_pagado        VARCHAR (20) NOT NULL,
+    proximo_pago        VARCHAR (50) NOT NULL,
+    no_transaccion      VARCHAR (50) NOT NULL,
+    mensualidad_precio  VARCHAR (50) NOT NULL,
+    
+   
+    fyh_creacion      DATETIME NULL,
+    fyh_actualizacion DATETIME NULL,
+    estado            VARCHAR (11)
+
+
+FOREIGN KEY (estudiante_id) REFERENCES estudiantes (id_estudiante)  on delete no action on update cascade
+
+)ENGINE=InnoDB;

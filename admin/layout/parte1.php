@@ -37,7 +37,7 @@ if(isset($_SESSION['sesion_email'])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <!-- STYLESHEET -->
     <link rel="stylesheet" href="<?=APP_URL;?>../public/dist/css/adminlte.min.css">
-    <link rel="stylesheet" href="<?=APP_URL;?>../public/css/admincss.css">
+    <link rel="stylesheet" href="<?=APP_URL;?>../public/css/sidebar_admin.css">
     <!-- Data Tables -->
     <link rel="stylesheet" href="<?=APP_URL;?>/public/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="<?=APP_URL;?>/public/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
@@ -137,7 +137,7 @@ if(isset($_SESSION['sesion_email'])) {
                         <lord-icon target="a" loading="interaction" style="height:30px;width:30px;" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/1524-bricks-toy.json">
                             <img alt="" loading="eager" src="https://media.lordicon.com/icons/wired/flat/1524-bricks-toy.svg">
                         </lord-icon>
-                        <span class="custom-text">Niveles</span>
+                        <span class="custom-text">Niveles y grados</span>
                         <i class="custom-arrow bx bx-chevron-down"></i>
                     </a>
                     <ul class="custom-sub-menu">
@@ -146,20 +146,25 @@ if(isset($_SESSION['sesion_email'])) {
                                 <span class="custom-text">Listado de niveles</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="<?=APP_URL;?>/admin/grados">
+                                <span class="custom-text">Listado de grados</span>
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">
-                        <lord-icon target="a" style="height:30px;width:30px;" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/978-project-management.json">
-                            <img alt="" loading="lazy" src="https://media.lordicon.com/icons/wired/flat/978-project-management.svg">
+                        <lord-icon target="a" style="height:30px;width:30px;" colors="secondary:#c71f16,quaternary:yellow,quinary:#e4e4e4" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/112-book.json">
+                            <img alt="" loading="eager" src="https://media.lordicon.com/icons/wired/flat/112-book.svg">
                         </lord-icon>
-                        <span class="custom-text">Grados</span>
+                        <span class="custom-text">Bloques</span>
                         <i class="custom-arrow bx bx-chevron-down"></i>
                     </a>
                     <ul class="custom-sub-menu">
                         <li>
-                            <a href="<?=APP_URL;?>/admin/grados">
-                                <span class="custom-text">Listado de grados</span>
+                            <a href="<?=APP_URL;?>/admin/bloques">
+                                <span class="custom-text">Listado de bloques</span>
                             </a>
                         </li>
                     </ul>
@@ -176,6 +181,13 @@ if(isset($_SESSION['sesion_email'])) {
                         <li>
                             <a href="<?=APP_URL;?>/admin/docentes">
                                 <span class="custom-text">Listado de coaches</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="custom-sub-menu">
+                        <li>
+                            <a href="<?=APP_URL;?>/admin/docentes/asignacion.php">
+                                <span class="custom-text">Asignación Cursos</span>
                             </a>
                         </li>
                     </ul>
@@ -197,6 +209,22 @@ if(isset($_SESSION['sesion_email'])) {
                         <li>
                             <a href="<?=APP_URL;?>/admin/estudiantes">
                                 <span class="custom-text">Listado de estudiantes</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <lord-icon target="a" style="height:30px;width:30px;" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/2752-banknote.json">
+                            <img alt="" loading="eager" src="https://media.lordicon.com/icons/wired/flat/2752-banknote.svg">
+                        </lord-icon>
+                        <span class="custom-text">Pagos</span>
+                        <i class="custom-arrow bx bx-chevron-down"></i>
+                    </a>
+                    <ul class="custom-sub-menu">
+                        <li>
+                            <a href="<?=APP_URL;?>/admin/pagos">
+                                <span class="custom-text">Realizar Pagos</span>
                             </a>
                         </li>
                     </ul>

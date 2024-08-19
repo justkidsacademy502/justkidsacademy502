@@ -26,7 +26,6 @@ body{
     border-radius: 30px;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
-    z-index: 1050;
 }
 
 .custom-sidebar .custom-sidebar-head {

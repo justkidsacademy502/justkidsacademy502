@@ -5,8 +5,10 @@ include("../app/controllers/roles/listado_de_roles.php");
 include("../app/controllers/usuarios/listado_de_usuarios.php");
 include("../app/controllers/niveles/listado_de_niveles.php");
 include("../app/controllers/grados/listado_de_grados.php");
+include("../app/controllers/materias/listado_de_materias.php");
 include("../app/controllers/administrativos/listado_de_administrativos.php");
 include("../app/controllers/docentes/listado_de_docentes.php");
+include("../app/controllers/estudiantes/listado_de_estudiantes.php");
 ?>
 
 
@@ -71,6 +73,84 @@ include("../app/controllers/docentes/listado_de_docentes.php");
 
         <div class="col-lg-3 col-6">
 
+<div class="small-box bg-pink">
+    <div class="inner">
+       <?php
+       $contador_administrativos =0;
+       foreach ($administrativos as $administrativo) {
+           $contador_administrativos = $contador_administrativos + 1;
+       }
+       ?>
+        <h3><?=$contador_administrativos;?></h3>
+        <p>administrativos registrados</p>
+    </div>
+    <div class="icon">
+        <i class="fas"><i class="bi bi-person-fill-check"></i></i>
+    </div>
+    <a href="<?=APP_URL?>/admin/administrativos" class="small-box-footer">
+    Más información
+    <lord-icon target="div" colors="primary:white" style="height:18px;width:18px;padding-top:3px;" trigger="hover" src="https://media.lordicon.com/icons/system/solid/161-trending-flat.json">
+       <img alt="" loading="eager" colors="primary:white" src="https://media.lordicon.com/icons/system/solid/161-trending-flat.svg">
+    </lord-icon>
+   </i>
+    </a>
+</div>
+</div>
+
+<div class="col-lg-3 col-6">
+
+<div class="small-box bg-indigo">
+    <div class="inner">
+       <?php
+       $contador_docentes =0;
+       foreach ($docentes as $docente) {
+           $contador_docentes = $contador_docentes + 1;
+       }
+       ?>
+        <h3><?=$contador_docentes;?></h3>
+        <p>Coaches registrados</p>
+    </div>
+    <div class="icon">
+        <i class="fas"><i class="bi bi-person-vcard-fill"></i></i>
+    </div>
+    <a href="<?=APP_URL?>/admin/docentes" class="small-box-footer">
+    Más información
+    <lord-icon target="div" colors="primary:white" style="height:18px;width:18px;padding-top:3px;" trigger="hover" src="https://media.lordicon.com/icons/system/solid/161-trending-flat.json">
+       <img alt="" loading="eager" colors="primary:white" src="https://media.lordicon.com/icons/system/solid/161-trending-flat.svg">
+    </lord-icon>
+   </i>
+    </a>
+</div>
+</div>
+
+<div class="col-lg-3 col-6">
+
+<div class="small-box bg-gray">
+    <div class="inner">
+       <?php
+       $contador_estudiantes =0;
+       foreach ($estudiantes as $estudiante) {
+           $contador_estudiantes = $contador_estudiantes + 1;
+       }
+       ?>
+        <h3><?=$contador_estudiantes;?></h3>
+        <p>Estudiantes registrados</p>
+    </div>
+    <div class="icon">
+        <i class="fas"><i class="bi bi-mortarboard-fill"></i></i></i>
+    </div>
+    <a href="<?=APP_URL?>/admin/estudiantes" class="small-box-footer">
+    Más información
+    <lord-icon target="div" colors="primary:white" style="height:18px;width:18px;padding-top:3px;" trigger="hover" src="https://media.lordicon.com/icons/system/solid/161-trending-flat.json">
+       <img alt="" loading="eager" colors="primary:white" src="https://media.lordicon.com/icons/system/solid/161-trending-flat.svg">
+    </lord-icon>
+   </i>
+    </a>
+</div>
+</div>
+
+        <div class="col-lg-3 col-6">
+
          <div class="small-box bg-purple">
              <div class="inner">
                 <?php
@@ -120,57 +200,31 @@ include("../app/controllers/docentes/listado_de_docentes.php");
          </div>
         </div>
 
-         <div class="col-lg-3 col-6">
-
-         <div class="small-box bg-pink">
-             <div class="inner">
-                <?php
-                $contador_administrativos =0;
-                foreach ($administrativos as $administrativo) {
-                    $contador_administrativos = $contador_administrativos + 1;
-                }
-                ?>
-                 <h3><?=$contador_administrativos;?></h3>
-                 <p>administrativos registrados</p>
-             </div>
-             <div class="icon">
-                 <i class="fas"><i class="bi bi-person-fill-check"></i></i>
-             </div>
-             <a href="<?=APP_URL?>/admin/administrativos" class="small-box-footer">
-             Más información
-             <lord-icon target="div" colors="primary:white" style="height:18px;width:18px;padding-top:3px;" trigger="hover" src="https://media.lordicon.com/icons/system/solid/161-trending-flat.json">
-                <img alt="" loading="eager" colors="primary:white" src="https://media.lordicon.com/icons/system/solid/161-trending-flat.svg">
-             </lord-icon>
-            </i>
-             </a>
-         </div>
-        </div>
 
         <div class="col-lg-3 col-6">
 
-         <div class="small-box bg-indigo">
-             <div class="inner">
-                <?php
-                $contador_docentes =0;
-                foreach ($docentes as $docente) {
-                    $contador_docentes = $contador_docentes + 1;
-                }
-                ?>
-                 <h3><?=$contador_docentes;?></h3>
-                 <p>Coaches registrados</p>
-             </div>
-             <div class="icon">
-                 <i class="fas"><i class="bi bi-person-vcard-fill"></i></i>
-             </div>
-             <a href="<?=APP_URL?>/admin/docentes" class="small-box-footer">
-             Más información
-             <lord-icon target="div" colors="primary:white" style="height:18px;width:18px;padding-top:3px;" trigger="hover" src="https://media.lordicon.com/icons/system/solid/161-trending-flat.json">
-                <img alt="" loading="eager" colors="primary:white" src="https://media.lordicon.com/icons/system/solid/161-trending-flat.svg">
-             </lord-icon>
-            </i>
-             </a>
-         </div>
-        </div>
+<div class="small-box bg-primary">
+    <div class="inner">
+       <?php
+       $contador_materias =0;
+       foreach ($materias as $materia) {
+           $contador_materias = $contador_materias + 1;
+       }
+       ?>
+        <h3 style="color: white;"><?=$contador_materias;?></h3>
+        <p style="color: white;">Bloques registrados</p>
+    </div>
+    <div class="icon">
+        <i class="fas"><i class="bi bi-book-half"></i></i>
+    </div>
+    <a href="<?=APP_URL?>/admin/bloques" class="small-box-footer">
+     Más información 
+    <lord-icon target="div" colors="primary:white" style="height:18px;width:18px;padding-top:3px;" trigger="hover" src="https://media.lordicon.com/icons/system/solid/161-trending-flat.json">
+       <img alt="" loading="eager" src="https://media.lordicon.com/icons/system/solid/161-trending-flat.svg">
+    </lord-icon></i>
+    </a>
+</div>
+</div>
 
         </div>
     </div>
