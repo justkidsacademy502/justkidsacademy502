@@ -12,7 +12,7 @@ include("../../app/controllers/niveles/listado_de_niveles.php");
 
 <div class="custom-main custom-sidebar-active">
     <div class="row">
-       <h1>Modificar: <?=$curso." - ".$paralelo?></h1> 
+       <h1>Modificar: <?=$bloque." - ".$paralelo?></h1> 
     </div>
     <br>
     <div class="row">
@@ -43,15 +43,15 @@ include("../../app/controllers/niveles/listado_de_niveles.php");
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="">Curso</label>
-                                <select name="curso" id="" class="form-control">
-                                    <option value="STARTERS - Block 1"<?=$curso=='STARTERS - Block 1' ? 'selected' : ''?>>STARTERS - Block 1</option>
-                                    <option value="STARTERS - Block 2"<?=$curso=='STARTERS - Block 2' ? 'selected' : ''?>>STARTERS - Block 2</option>
-                                    <option value="EXPLORERS - Block 1"<?=$curso=='EXPLORERS - Block 1' ? 'selected' : ''?>>EXPLORERS - Block 1</option>
-                                    <option value="EXPLORERS - Block 2"<?=$curso=='EXPLORERS - Block 2' ? 'selected' : ''?>>EXPLORERS - Block 2</option>
-                                    <option value="MASTERS - Block 1"<?=$curso=='MASTERS - Block 1' ? 'selected' : ''?>>MASTERS - Block 1</option>
-                                    <option value="MASTERS - Block 2"<?=$curso=='MASTERS - Block 2' ? 'selected' : ''?>>MASTERS - Block 2</option>
-                                    <option value="MASTERS - Block 3"<?=$curso=='MASTERS - Block 3' ? 'selected' : ''?>>MASTERS - Block 3</option>
+                                <label for="">Bloques</label>
+                                <select name="bloque" id="" class="form-control">
+                                    <option value="STARTERS - BLOCK 1"<?=$bloque=='STARTERS - BLOCK 1' ? 'selected' : ''?>>STARTERS - BLOCK 1</option>
+                                    <option value="STARTERS - BLOCK 2"<?=$bloque=='STARTERS - BLOCK 2' ? 'selected' : ''?>>STARTERS - BLOCK 2</option>
+                                    <option value="EXPLORERS - BLOCK 1"<?=$bloque=='EXPLORERS - BLOCK 1' ? 'selected' : ''?>>EXPLORERS - BLOCK 1</option>
+                                    <option value="EXPLORERS - BLOCK 2"<?=$bloque=='EXPLORERS - BLOCK 2' ? 'selected' : ''?>>EXPLORERS - BLOCK 2</option>
+                                    <option value="MASTERS - BLOCK 1"<?=$bloque=='MASTERS - BLOCK 1' ? 'selected' : ''?>>MASTERS - BLOCK 1</option>
+                                    <option value="MASTERS - BLOCK 2"<?=$bloque=='MASTERS - BLOCK 2' ? 'selected' : ''?>>MASTERS - BLOCK 2</option>
+                                    <option value="MASTERS - BLOCK 3"<?=$bloque=='MASTERS - BLOCK 3' ? 'selected' : ''?>>MASTERS - BLOCK 3</option>
                                 </select>
                             </div>
                         </div>
@@ -81,7 +81,7 @@ include("../../app/controllers/niveles/listado_de_niveles.php");
                         <div class="col-md-12">
                             <div class="form-group">
                                 <button type="submit" class="btn btn-success">Actualizar</button>
-                                <a href="<?=APP_URL;?>/admin/grados" class="btn btn-secondary">Cancelar</a>
+                                <a href="<?=APP_URL;?>/admin/cursos" class="btn btn-secondary">Cancelar</a>
                             </div>
                         </div>
                     </div>

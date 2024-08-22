@@ -50,24 +50,12 @@ include("../../app/controllers/grados/listado_de_grados.php");
                                 <input type="text" name="apellidos" class="form-control" require>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label for="">DPI</label>
-                                <input type="number" name="dpi" class="form-control" require>
-                            </div>
-                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="">Fecha de nacimiento</label>
                                 <input type="date" name="fecha_nacimiento" class="form-control" require>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label for="">Telefono</label>
-                                <input type="number" name="celular" class="form-control" require>
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -91,7 +79,7 @@ include("../../app/controllers/grados/listado_de_grados.php");
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Nivel</label>
                               
@@ -106,17 +94,23 @@ include("../../app/controllers/grados/listado_de_grados.php");
                              
                             </div>
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                             <div class="form-group">
-                                <label for="">Grado</label>
+                                <label for="">Curso</label>
                                 <select name="grado_id" id="" class="form-control">
                                    <?php
                                    foreach ($grados as $grado) { ?>
-                                       <option value="<?=$grado['id_grado'];?>"><?=$grado['curso']." - ".$grado['paralelo'];?></option>
+                                       <option value="<?=$grado['id_grado'];?>"><?=$grado['bloque']." - ".$grado['paralelo'];?></option>
                                    <?php
                                    }
                                    ?>
                                    </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="">Horario</label>
+                                <input type="text" name="horario" class="form-control" require>
                             </div>
                         </div>
                     </div>

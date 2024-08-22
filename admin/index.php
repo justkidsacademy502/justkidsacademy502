@@ -185,12 +185,12 @@ include("../app/controllers/estudiantes/listado_de_estudiantes.php");
                 }
                 ?>
                  <h3><?=$contador_grados;?></h3>
-                 <p>Grados registrados</p>
+                 <p>Cursos registrados</p>
              </div>
              <div class="icon">
                  <i class="fas"><i class="bi bi-layers-fill"></i></i>
              </div>
-             <a href="<?=APP_URL?>/admin/grados" class="small-box-footer">
+             <a href="<?=APP_URL?>/admin/cursos" class="small-box-footer">
              Más información
              <lord-icon target="div" colors="primary:white" style="height:18px;width:18px;padding-top:3px;" trigger="hover" src="https://media.lordicon.com/icons/system/solid/161-trending-flat.json">
                 <img alt="" loading="eager" colors="primary:white" src="https://media.lordicon.com/icons/system/solid/161-trending-flat.svg">

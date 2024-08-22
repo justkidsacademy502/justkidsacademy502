@@ -1,3 +1,40 @@
+CREATE TABLE configuracion_instituciones (
+
+    id_config_institucion   INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nombre_institucion      VARCHAR (255) NOT NULL,
+    logo                    VARCHAR (255) NULL,
+    telefono                VARCHAR (255) NULL,
+    correo                  VARCHAR (255) NULL,
+    
+   
+    fyh_creacion      DATETIME NULL,
+    fyh_actualizacion DATETIME NULL,
+    estado            VARCHAR (11)
+
+
+)ENGINE=InnoDB;
+INSERT INTO configuracion_instituciones (nombre_institucion,logo,telefono,correo,fyh_creacion,estado)
+VALUES ('Just Kids Academy','logo_home.png','55136495','justkidsacademy502@gmail.com','2024-09-08 13:10:10','1');
+
+
+CREATE TABLE gestiones (
+
+    id_gestion             INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    gestion                VARCHAR (255) NOT NULL,
+    
+   
+    fyh_creacion      DATETIME NULL,
+    fyh_actualizacion DATETIME NULL,
+    estado            VARCHAR (11)
+
+
+)ENGINE=InnoDB;
+INSERT INTO gestiones (gestion,fyh_creacion,estado)
+VALUES ('Gestion 2024','2024-09-08 13:10:10','1');
+
+
+
+
 CREATE TABLE roles (
 
     id_rol         INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -84,13 +121,52 @@ FOREIGN KEY (persona_id) REFERENCES personas (id_persona)  on delete no action o
 
 
 
+CREATE TABLE niveles (
+
+    id_nivel     INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    gestion_id   INT (11) NOT NULL,
+    nivel        VARCHAR (255) NOT NULL,
+    turno        VARCHAR (255) NOT NULL,
+   
+    fyh_creacion      DATETIME NULL,
+    fyh_actualizacion DATETIME NULL,
+    estado            VARCHAR (11),
+
+    FOREIGN KEY (gestion_id) REFERENCES gestiones (id_gestion)  on delete no action on update cascade
+
+)ENGINE=InnoDB;
+INSERT INTO niveles (gestion_id,nivel,turno,fyh_creacion,estado)
+VALUES ('1','STARTERS','MATUTINO','2024-07-29 11:30:10','1');
+
+
+
+CREATE TABLE grados (
+
+    id_grado     INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nivel_id     INT (11) NOT NULL,
+    bloque       VARCHAR (255) NOT NULL,
+    paralelo     VARCHAR (255) NOT NULL,
+    horario      VARCHAR (255) NOT NULL,
+   
+    fyh_creacion      DATETIME NULL,
+    fyh_actualizacion DATETIME NULL,
+    estado            VARCHAR (11),
+
+    FOREIGN KEY (nivel_id) REFERENCES niveles (id_nivel)  on delete no action on update cascade
+
+)ENGINE=InnoDB;
+INSERT INTO grados (nivel_id,bloque,paralelo,fyh_creacion,estado)
+VALUES ('1','STARTERS - BLOCK 1','A','2024-07-29 11:30:10','1');
+
+
+
+
 CREATE TABLE estudiantes (
 
     id_estudiante       INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     persona_id          INT (11) NOT NULL,
     nivel_id            INT (11) NOT NULL,
     grado_id            INT (11) NOT NULL,
-    carnet              VARCHAR (25) NOT NULL,
    
     fyh_creacion      DATETIME NULL,
     fyh_actualizacion DATETIME NULL,
@@ -121,78 +197,6 @@ FOREIGN KEY (estudiante_id) REFERENCES estudiantes (id_estudiante)  on delete no
 
 )ENGINE=InnoDB;
 
-
-CREATE TABLE configuracion_instituciones (
-
-    id_config_institucion   INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    nombre_institucion      VARCHAR (255) NOT NULL,
-    logo                    VARCHAR (255) NULL,
-    telefono                VARCHAR (255) NULL,
-    correo                  VARCHAR (255) NULL,
-    
-   
-    fyh_creacion      DATETIME NULL,
-    fyh_actualizacion DATETIME NULL,
-    estado            VARCHAR (11)
-
-
-)ENGINE=InnoDB;
-INSERT INTO configuracion_instituciones (nombre_institucion,logo,telefono,correo,fyh_creacion,estado)
-VALUES ('Just Kids Home','logo_home.png','55136495','justkidsacademy502@gmail.com','2024-09-08 13:10:10','1');
-
-
-CREATE TABLE gestiones (
-
-    id_gestion             INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    gestion                VARCHAR (255) NOT NULL,
-    
-   
-    fyh_creacion      DATETIME NULL,
-    fyh_actualizacion DATETIME NULL,
-    estado            VARCHAR (11)
-
-
-)ENGINE=InnoDB;
-INSERT INTO gestiones (gestion,fyh_creacion,estado)
-VALUES ('Gestion 2024','2024-09-08 13:10:10','1');
-
-
-CREATE TABLE niveles (
-
-    id_nivel     INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    gestion_id   INT (11) NOT NULL,
-    nivel        VARCHAR (255) NOT NULL,
-    turno        VARCHAR (255) NOT NULL,
-   
-    fyh_creacion      DATETIME NULL,
-    fyh_actualizacion DATETIME NULL,
-    estado            VARCHAR (11),
-
-    FOREIGN KEY (gestion_id) REFERENCES gestiones (id_gestion)  on delete no action on update cascade
-
-)ENGINE=InnoDB;
-INSERT INTO niveles (gestion_id,nivel,turno,fyh_creacion,estado)
-VALUES ('1','Startes','Vespertino','2024-07-29 11:30:10','1');
-
-
-
-CREATE TABLE grados (
-
-    id_grado     INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    nivel_id     INT (11) NOT NULL,
-    curso        VARCHAR (255) NOT NULL,
-    paralelo     VARCHAR (255) NOT NULL,
-    horario      VARCHAR (255) NOT NULL,
-   
-    fyh_creacion      DATETIME NULL,
-    fyh_actualizacion DATETIME NULL,
-    estado            VARCHAR (11),
-
-    FOREIGN KEY (nivel_id) REFERENCES niveles (id_nivel)  on delete no action on update cascade
-
-)ENGINE=InnoDB;
-INSERT INTO grados (nivel_id,curso,paralelo,fyh_creacion,estado)
-VALUES ('1','STARTERS-BLOCK 1','A','2024-07-29 11:30:10','1');
 
 
 CREATE TABLE materias (
@@ -227,9 +231,34 @@ CREATE TABLE pagos (
    
     fyh_creacion      DATETIME NULL,
     fyh_actualizacion DATETIME NULL,
-    estado            VARCHAR (11)
+    estado            VARCHAR (11),
 
 
 FOREIGN KEY (estudiante_id) REFERENCES estudiantes (id_estudiante)  on delete no action on update cascade
+
+)ENGINE=InnoDB;
+
+
+
+CREATE TABLE asignaciones (
+
+    id_asignacion      INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    docente_id         INT (11) NOT NULL,
+    nivel_id           INT (11) NOT NULL,
+    grado_id           INT (11) NOT NULL,
+    materia_id         INT (11) NOT NULL,
+
+    
+   
+    fyh_creacion      DATETIME NULL,
+    fyh_actualizacion DATETIME NULL,
+    estado            VARCHAR (11),
+
+    FOREIGN KEY (docente_id) REFERENCES docentes (id_docente)  on delete no action on update cascade,
+    FOREIGN KEY (nivel_id) REFERENCES niveles (id_nivel)  on delete no action on update cascade,
+    FOREIGN KEY (grado_id) REFERENCES grados (id_grado)  on delete no action on update cascade,
+    FOREIGN KEY (materia_id) REFERENCES materias (id_materia)  on delete no action on update cascade
+
+
 
 )ENGINE=InnoDB;

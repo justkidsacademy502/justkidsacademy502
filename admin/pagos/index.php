@@ -27,7 +27,7 @@ include("../layout/parte1.php");
                          <th><center>Telefono</center></th>
                          <th><center>Nivel</center></th>
                          <th><center>Turno</center></th>
-                         <th><center>Grado</center></th>
+                         <th><center>Curso</center></th>
                          <th><center>Estado</center></th>
                          <th><center>Acciones</center></th>
                       </tr>
@@ -45,7 +45,7 @@ include("../layout/parte1.php");
                        <td><?=$estudiante['celular'];?></td>
                        <td><?=$estudiante['nivel'];?></td>
                        <td><?=$estudiante['turno'];?></td>
-                       <td><?=$estudiante['curso']." - ".$estudiante['paralelo'];?></td>
+                       <td><?=$estudiante['bloque']." - ".$estudiante['paralelo'];?></td>
                        <td style="text-align: center;">
                         <?php
                         if($estudiante['estado'] == "1") { ?>

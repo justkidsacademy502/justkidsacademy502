@@ -22,14 +22,13 @@ foreach($estudiantes as $estudiante) {
     $nombre_rol = $estudiante['nombre_rol'];
     $nombres = $estudiante['nombres'];
     $apellidos = $estudiante['apellidos'];
-    $dpi = $estudiante['dpi'];
     $fecha_nacimiento = $estudiante['fecha_nacimiento'];
-    $celular = $estudiante['celular'];
     $email = $estudiante['email'];
     $nivel_id = $estudiante['nivel_id'];
     $nivel = $estudiante['nivel'];
     $turno = $estudiante['turno'];
-    $curso = $estudiante['curso'];
+    $bloque = $estudiante['bloque'];
+    $horario = $estudiante['horario'];
     $paralelo = $estudiante['paralelo'];
     $grado_id = $estudiante['grado_id'];
     $nombres_apellidos_ppff = $estudiante['nombres_apellidos_ppff'];

@@ -11,7 +11,7 @@ include("../../app/controllers/grados/datos_grados.php");
 
 <div class="custom-main custom-sidebar-active">
     <div class="row">
-       <h1>Grado: <?=$curso." - ".$paralelo?></h1> 
+       <h1>Grado: <?=$bloque." - ".$paralelo?></h1> 
     </div>
     <br>
     <div class="row">
@@ -38,8 +38,8 @@ include("../../app/controllers/grados/datos_grados.php");
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="">Curso</label>
-                                <p><?=$curso?></p>
+                                <label for="">Bloques</label>
+                                <p><?=$bloque?></p>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -79,7 +79,7 @@ include("../../app/controllers/grados/datos_grados.php");
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <a href="<?=APP_URL;?>/admin/grados" class="btn btn-secondary">Volver</a>
+                                <a href="<?=APP_URL;?>/admin/cursos" class="btn btn-secondary">Volver</a>
                             </div>
                         </div>
                     </div>

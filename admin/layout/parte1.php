@@ -137,7 +137,7 @@ if(isset($_SESSION['sesion_email'])) {
                         <lord-icon target="a" loading="interaction" style="height:30px;width:30px;" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/1524-bricks-toy.json">
                             <img alt="" loading="eager" src="https://media.lordicon.com/icons/wired/flat/1524-bricks-toy.svg">
                         </lord-icon>
-                        <span class="custom-text">Niveles y grados</span>
+                        <span class="custom-text">Niveles y Cursos</span>
                         <i class="custom-arrow bx bx-chevron-down"></i>
                     </a>
                     <ul class="custom-sub-menu">
@@ -147,8 +147,8 @@ if(isset($_SESSION['sesion_email'])) {
                             </a>
                         </li>
                         <li>
-                            <a href="<?=APP_URL;?>/admin/grados">
-                                <span class="custom-text">Listado de grados</span>
+                            <a href="<?=APP_URL;?>/admin/cursos">
+                                <span class="custom-text">Listado de cursos</span>
                             </a>
                         </li>
                     </ul>

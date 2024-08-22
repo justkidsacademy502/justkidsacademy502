@@ -9,7 +9,7 @@ $grados = $query_grados->fetchAll(PDO::FETCH_ASSOC);
 foreach ($grados as $grado){
     $nivel_id = $grado['nivel_id'];
     $id_grado = $grado['id_grado'];
-    $curso = $grado['curso'];
+    $bloque = $grado['bloque'];
     $paralelo = $grado['paralelo'];
     $horario = $grado['horario'];
     $nivel = $grado['nivel'];

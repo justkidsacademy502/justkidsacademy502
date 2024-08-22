@@ -8,7 +8,7 @@ include("../../app/controllers/niveles/listado_de_niveles.php");
 
 <div class="custom-main custom-sidebar-active">
     <div class="row">
-       <h1>Registro de Grados</h1> 
+       <h1>Registro de Cursos</h1> 
     </div>
     <br>
     <div class="row">
@@ -38,15 +38,15 @@ include("../../app/controllers/niveles/listado_de_niveles.php");
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="">Curso</label>
-                                <select name="curso" id="" class="form-control">
-                                    <option value="STARTERS - Block 1">STARTERS - Block 1</option>
-                                    <option value="STARTERS - Block 2">STARTERS - Block 2</option>
-                                    <option value="EXPLORERS - Block 1">EXPLORERS - Block 1</option>
-                                    <option value="EXPLORERS - Block 2">EXPLORERS - Block 2</option>
-                                    <option value="MASTERS - Block 1">MASTERS - Block 1</option>
-                                    <option value="MASTERS - Block 2">MASTERS - Block 2</option>
-                                    <option value="MASTERS - Block 3">MASTERS - Block 3</option>
+                                <label for="">Bloques</label>
+                                <select name="bloque" id="" class="form-control">
+                                    <option value="STARTERS - BLOCK 1">STARTERS - BLOCK 1</option>
+                                    <option value="STARTERS - BLOCK 2">STARTERS - BLOCK 2</option>
+                                    <option value="EXPLORERS - BLOCK 1">EXPLORERS - BLOCK 1</option>
+                                    <option value="EXPLORERS - BLOCK 2">EXPLORERS - BLOCK 2</option>
+                                    <option value="MASTERS - BLOCK 1">MASTERS - BLOCK 1</option>
+                                    <option value="MASTERS - BLOCK 2">MASTERS - BLOCK 2</option>
+                                    <option value="MASTERS - BLOCK 3">MASTERS - BLOCK 3</option>
                                 </select>
                             </div>
                         </div>
@@ -76,7 +76,7 @@ include("../../app/controllers/niveles/listado_de_niveles.php");
                         <div class="col-md-12">
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary">Registrar</button>
-                                <a href="<?=APP_URL;?>/admin/grados" class="btn btn-secondary">Cancelar</a>
+                                <a href="<?=APP_URL;?>/admin/cursos" class="btn btn-secondary">Cancelar</a>
                             </div>
                         </div>
                     </div>

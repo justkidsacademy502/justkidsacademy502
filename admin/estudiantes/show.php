@@ -44,33 +44,19 @@ include(".././../app/controllers/estudiantes/datos_del_estudiante.php");
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label for="">DPI</label>
-                                <p><?=$dpi;?></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="form-group">
                                 <label for="">Fecha de nacimiento</label>
                                 <p><?=$fecha_nacimiento;?></p>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label for="">Telefono</label>
-                                <p><?=$celular;?></p>
-                            </div>
-                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="">Email</label>
                                 <p><?=$email;?></p>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                    <div class="col-md-3">
+                        <div class="col-md-3">
                             <div class="form-group">
                                 <label for="">Fecha de creación</label>
                                 <p><?=$fyh_creacion;?></p>
@@ -102,16 +88,22 @@ include(".././../app/controllers/estudiantes/datos_del_estudiante.php");
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                             <div class="form-group">
                                 <label for="">Nivel</label>
                                 <p><?=$nivel." - ".$turno;?></p>
                             </div>
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                             <div class="form-group">
-                                <label for="">Grado</label>
-                                <p><?=$curso." - ".$paralelo;?></p>
+                                <label for="">Curso</label>
+                                <p><?=$bloque." - ".$paralelo;?></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="">Horario</label>
+                                <p><?=$horario;?></p>
                             </div>
                         </div>
                     </div>

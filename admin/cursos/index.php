@@ -8,16 +8,16 @@ include("../../app/controllers/grados/listado_de_grados.php");
 
 <div class="custom-main custom-sidebar-active">
     <div class="center">
-       <h1>Listado de Grados</h1> 
+       <h1>Listado de Cursos</h1> 
     </div>
     <br>
     <div class="row">
         <div class="col-md-12">
             <div class="card card-outline card-primary">
                 <div class="card-header">
-                    <h3 class="card-title">Grados Registrados</h3>
+                    <h3 class="card-title">Cursos Registrados</h3>
                     <div class="card-tools">
-                       <a href="create.php" class="btn btn-primary"><i class="bi bi-plus"></i> Crear nuevo Grado</a>
+                       <a href="create.php" class="btn btn-primary"><i class="bi bi-plus"></i> Crear nuevo Curso</a>
                     </div>
                 </div>
                 <div class="card-body">
@@ -27,7 +27,7 @@ include("../../app/controllers/grados/listado_de_grados.php");
                          <th><center>Nro</center></th>
                          <th><center>Nivel</center></th>
                          <th><center>Turno</center></th>
-                         <th><center>Curso</center></th>
+                         <th><center>Bloque</center></th>
                          <th><center>Sección</center></th>
                          <th><center>Horario</center></th>
                          <th><center>Acciones</center></th>
@@ -43,7 +43,7 @@ include("../../app/controllers/grados/listado_de_grados.php");
                        <td style="text-align: center;"><?=$contador_grados;?></td>
                        <td style="text-align: center;"><?=$grado['nivel'];?></td>
                        <td style="text-align: center;"><?=$grado['turno'];?></td>
-                       <td style="text-align: center;"><?=$grado['curso'];?></td>
+                       <td style="text-align: center;"><?=$grado['bloque'];?></td>
                        <td style="text-align: center;"><?=$grado['paralelo'];?></td>
                        <td style="text-align: center;"><?=$grado['horario'];?></td>
                        <td style="text-align: center;">

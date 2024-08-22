@@ -6,9 +6,7 @@ include("../../config.php");
 $rol_id = $_POST['rol_id'];
 $nombres = $_POST['nombres'];
 $apellidos = $_POST['apellidos'];
-$dpi = $_POST['dpi'];
 $fecha_nacimiento = $_POST['fecha_nacimiento'];
-$celular = $_POST['celular'];
 $email = $_POST['email'];
 $nivel_id = $_POST['nivel_id'];
 $grado_id = $_POST['grado_id'];
@@ -39,15 +37,15 @@ $id_usuario = $pdo->lastInsertId();
 
 //--------------------- INSERTAR A LA TABLA PERSONAS
 $sentencia = $pdo->prepare('INSERT INTO personas
-        (usuario_id,nombres,apellidos,dpi,fecha_nacimiento,celular,fyh_creacion, estado)
-VALUES  (:usuario_id,:nombres,:apellidos,:dpi,:fecha_nacimiento,:celular,:fyh_creacion,:estado)');
+        (usuario_id,nombres,apellidos,fecha_nacimiento,fyh_creacion, estado)
+VALUES  (:usuario_id,:nombres,:apellidos,:fecha_nacimiento,:fyh_creacion,:estado)');
 
 $sentencia->bindParam(':usuario_id',$id_usuario);
 $sentencia->bindParam(':nombres',$nombres);
 $sentencia->bindParam(':apellidos',$apellidos);
-$sentencia->bindParam(':dpi',$dpi);
+
 $sentencia->bindParam(':fecha_nacimiento',$fecha_nacimiento);
-$sentencia->bindParam(':celular',$celular);
+
 $sentencia->bindParam('fyh_creacion',$fechahora);
 $sentencia->bindParam('estado',$estado_de_registro);
 $sentencia->execute();
