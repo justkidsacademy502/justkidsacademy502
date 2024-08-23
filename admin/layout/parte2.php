@@ -4,8 +4,7 @@
     crossorigin="anonymous"
 ></script>
 <script src="<?=APP_URL;?>/public/js/script-admin.js"></script>
-<!-- jQuery -->
-<script src="<?=APP_URL;?>/public/plugins/jquery/jquery.min.js"></script>
+
 <!-- Bootstrap 4 -->
 <script src="<?=APP_URL;?>/public/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- Data Tables -->

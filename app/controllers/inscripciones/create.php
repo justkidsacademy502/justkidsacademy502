@@ -19,7 +19,7 @@ $relacion_ppff = $_POST['relacion_ppff'];
 $pdo->beginTransaction();
 
 //-----------------------INSERTAR A LA TABLA USUARIOS
-$password = password_hash($dpi, PASSWORD_DEFAULT);
+$password = password_hash($email, PASSWORD_DEFAULT);
 
 $sentencia = $pdo->prepare('INSERT INTO usuarios
         (rol_id, email, password, fyh_creacion, estado)

@@ -19,7 +19,7 @@ $fecha_contratacion = $_POST['fecha_contratacion'];
 $pdo->beginTransaction();
 
 //-----------------------ACTUALIZAR A LA TABLA USUARIOS
-$password = password_hash($dpi, PASSWORD_DEFAULT);
+$password = password_hash($email, PASSWORD_DEFAULT);
 
 $sentencia = $pdo->prepare('UPDATE usuarios
 SET     rol_id=:rol_id,
