@@ -122,56 +122,57 @@ include("../layout/parte1.php");
                                   <th style="text-align: center;">Permiso</th>
                                   <th style="text-align: center;">Acción</th>
                 </tr>
-                <?php
+        </div>
+        <?php
                 $contador = 0;
                 foreach ($roles_permisos as $roles_permiso) {
                   if ($id_rol == $roles_permiso['rol_id']) {
                     $id_rol_permiso = $roles_permiso['id_rol_permiso'];
                     $contador = $contador + 1; ?>
-                    <tr>
-                      <td>
-                        <center><?= $contador; ?></center>
-                      </td>
-                      <td>
-                        <center><?= $roles_permiso['nombre_rol']; ?></center>
-                      </td>
-                      <td><?= $roles_permiso['nombre_url']; ?></td>
-                      <td>
-                        <form action="<?= APP_URL; ?>/app/controllers/roles/delete_rol_permiso.php" onclick="preguntar<?= $id_rol_permiso; ?>(event)" method="post" id="miFormulario<?= $id_rol_permiso; ?>">
-                          <input type="text" name="id_rol_permiso" value="<?= $id_rol_permiso; ?>" hidden>
-                          <button type="submit" class="btn btn-danger"><i class="bi bi-trash3"></i></button>
-                        </form>
-                        <script>
-                          function preguntar<?= $id_rol_permiso; ?>(event) {
-                            event.preventDefault();
-                            swal.fire({
-                              title: 'Eliminar registro',
-                              text: '¿Desea eliminar este registro?',
-                              icon: 'question',
-                              showDenyButton: true,
-                              confirmButtonText: 'Eliminar',
-                              confirmButtonColor: '#F44336',
-                              denyButtonColor: '#938484',
-                              denyButtonText: 'Cancelar',
-                            }).then((result) => {
-                              if (result.isConfirmed) {
-                                var form = $('#miFormulario<?= $id_rol_permiso; ?>')
-                                form.submit();
-                              }
-                            });
-                          }
-                        </script>
-                      </td>
-                    </tr>
-                <?php
+            <tr>
+              <td>
+                <center><?= $contador; ?></center>
+              </td>
+              <td>
+                <center><?= $roles_permiso['nombre_rol']; ?></center>
+              </td>
+              <td><?= $roles_permiso['nombre_url']; ?></td>
+              <td>
+                <form action="<?= APP_URL; ?>/app/controllers/roles/delete_rol_permiso.php" onclick="preguntar<?= $id_rol_permiso; ?>(event)" method="post" id="miFormulario<?= $id_rol_permiso; ?>">
+                  <input type="text" name="id_rol_permiso" value="<?= $id_rol_permiso; ?>" hidden>
+                  <button type="submit" class="btn btn-danger"><i class="bi bi-trash3"></i></button>
+                </form>
+                <script>
+                  function preguntar<?= $id_rol_permiso; ?>(event) {
+                    event.preventDefault();
+                    swal.fire({
+                      title: 'Eliminar registro',
+                      text: '¿Desea eliminar este registro?',
+                      icon: 'question',
+                      showDenyButton: true,
+                      confirmButtonText: 'Eliminar',
+                      confirmButtonColor: '#F44336',
+                      denyButtonColor: '#938484',
+                      denyButtonText: 'Cancelar',
+                    }).then((result) => {
+                      if (result.isConfirmed) {
+                        var form = $('#miFormulario<?= $id_rol_permiso; ?>')
+                        form.submit();
+                      }
+                    });
+                  }
+                </script>
+              </td>
+            </tr>
+        <?php
                   }
                 }
-                ?>
-          </table>
-        </div>
+        ?>
+        </table>
       </div>
     </div>
   </div>
+</div>
 </div> <a href="show.php?id=<?= $id_rol; ?>" type="button" class="btn btn-primary"><i class="bi bi-eye"></i></a>
 <a href="edit.php?id=<?= $id_rol; ?>" type="button" class="btn btn-success"><i class="bi bi-pencil"></i></a>
 <form action="<?= APP_URL; ?>/app/controllers/roles/delete.php" onclick="preguntar<?= $id_rol; ?>(event)" method="post" id="miFormulario<?= $id_rol; ?>">

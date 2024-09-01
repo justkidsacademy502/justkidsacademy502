@@ -56,7 +56,7 @@ include("../../../app/controllers/configuraciones/gestion/listado_de_gestiones.p
                          <div class="btn-group" role="group" aria-label="Basic example">
                              <a href="show.php?id=<?=$id_gestion;?>" type="button" class="btn btn-primary"><i class="bi bi-eye"></i></a>
                              <a href="edit.php?id=<?=$id_gestion;?>" type="button" class="btn btn-success"><i class="bi bi-pencil"></i></a>
-                             <!--<form action="<?=APP_URL;?>/app/controllers/configuraciones/institucion/delete.php" onclick="preguntar<?=$id_gestion;?>(event)" method="post" id="miFormulario<?=$id_gestion;?>">
+                             <form action="<?=APP_URL;?>/app/controllers/configuraciones/institucion/delete.php" onclick="preguntar<?=$id_gestion;?>(event)" method="post" id="miFormulario<?=$id_gestion;?>">
                               <input type="text" name="id_gestion" value="<?=$id_gestion;?>" hidden>
                              <button type="submit" class="btn btn-danger" style="border-radius: 0px 5px 5px 0px;"><i class="bi bi-trash3"></i></button>
                              </form>
@@ -79,7 +79,7 @@ include("../../../app/controllers/configuraciones/gestion/listado_de_gestiones.p
                                   }
                                 });
                               }
-                               </script>-->
+                               </script>
                          </div>
                        </td>
                     </tr>
