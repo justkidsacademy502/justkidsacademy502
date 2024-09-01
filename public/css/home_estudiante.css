@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.top-image-bxx {
+    width: 100%;
+    position: fixed; /* Fija la imagen en la parte superior */
+    top: 0;
+    text-align: center; /* Centra la imagen horizontalmente dentro del contenedor */
+    padding-right: 300px;
+}
+
+.top-image {
+    display: inline-block; /* Mantiene la imagen en el flujo normal */
+    width: 500px; /* Ancho fijo para la imagen */
+    height: auto; /* Altura automática para mantener las proporciones */
+}
+
+.wrapper {
+    width: 100%;
+    position: relative;
+    overflow: hidden; /* Asegura que el contenido fuera del carrusel esté oculto */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 16px; /* Añade un pequeño relleno para que las tarjetas no toquen los bordes */
+    display: flex;
+    justify-content: center; /* Centra el carrusel horizontalmente */
+    align-items: center; /* Centra el carrusel verticalmente */
+}
+
+.wrapper i {
+    height: 50px;
+    width: 50px;
+    background-color: #f6f6f6;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 1.25rem;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    z-index: 10; /* Asegura que las flechas estén encima del carrusel */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transiciones suaves para los botones */
+}
+
+.wrapper i#left {
+    left: 10px; /* Ajusta la distancia del borde izquierdo */
+}
+
+.wrapper i#right {
+    right: 10px; /* Ajusta la distancia del borde derecho */
+}
+
+.wrapper i:hover {
+    background-color: #e0e0e0; /* Color de fondo al pasar el cursor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el cursor */
+}
+
+.wrapper .carousel {
+    display: flex;
+    overflow: hidden; /* Oculta las tarjetas que no están en la vista */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    gap: 20px; /* Espacio entre tarjetas */
+    align-items: center; /* Centra verticalmente las tarjetas en el carrusel */
+    width: 100%;
+}
+
+.carousel .card {
+    scroll-snap-align: start;
+    flex: 0 0 auto; /* Asegura que las tarjetas mantengan su tamaño */
+    width: 300px; /* Ancho de las tarjetas */
+    height: 342px;
+    list-style: none;
+    background-color: #fff; /* Fondo blanco para las tarjetas */
+    border-radius: 12px;
+    display: flex;
+    cursor: pointer;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil alrededor de las tarjetas */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves para las tarjetas */
+    position: relative; /* Permite que el contenido se expanda sin afectar el flujo de otras tarjetas */
+    z-index: 1; /* Asegura que la tarjeta expandida esté sobre las demás */
+}
+
+.carousel .card:hover {
+    transform: scale(1.05); /* Aumenta el tamaño de la tarjeta al pasar el cursor */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el cursor */
+}
+
+/* Opcional: Ajusta el tamaño máximo del contenedor para que sea mayor cuando una tarjeta se expanda */
+.wrapper {
+    overflow: visible; /* Permite que el contenedor muestre tarjetas expandidas */
+}
+
+.card .img {
+    background-color: #e0e0e0; /* Color de fondo para el contenedor de la imagen */
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
+    overflow: hidden; /* Asegura que la imagen no se desborde del contenedor */
+}
+
+.card .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+
+.card h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 20px 0 5px;
+    color: #333; /* Color del texto para mejor legibilidad */
+}
+
+@media screen and (max-width: 1200px) {
+    .wrapper {
+        max-width: 1000px; /* Ajusta el tamaño del contenedor para pantallas más pequeñas */
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+        gap: 15px; /* Espacio entre tarjetas para pantallas más pequeñas */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper .carousel {
+        gap: 10px; /* Espacio entre tarjetas para pantallas muy pequeñas */
+    }
+    .top-image{
+
+        margin-top: 10px;
+        width: 300px; /* Ancho fijo para la imagen */
+        height: auto; /* Altura automática para mantener las proporciones */
+    }
+}

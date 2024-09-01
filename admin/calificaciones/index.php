@@ -25,9 +25,9 @@ include("../layout/parte1.php");
                          <th><center>Nivel</center></th>
                          <th><center>Turno</center></th>
                          <th><center>Curso</center></th>
-                         <th><center>Sección</center></th>
-                         <th><center>Horario</center></th>    
+                         <th><center>Sección</center></th>   
                          <th><center>Bloque</center></th>
+                         <th><center>Horario</center></th> 
                          <th><center>Acciones</center></th>
                       </tr>
                     </thead>
@@ -46,7 +46,7 @@ include("../layout/parte1.php");
                                     <td><center><?=$asignacione['paralelo'];?></center></td>
                                     <td><center><?=$asignacione['nombre_materia'];?></center></td>
                                     <td><center><?=$asignacione['horario'];?></center></td>
-                                    <td><center><a href="create.php?id_grado=<?=$id_grado;?>&&id_docente=<?=$asignacione['docente_id'];?>&&id_materia=<?=$asignacione['materia_id'];?>" class="btn btn-primary btn-sm"><i class="bi bi-check2-square"></i> Subir Notas</a></center></td>
+                                    <td><center><a href="create.php?id_grado=<?=$id_grado;?>&&id_docente=<?=$asignacione['docente_id'];?>&&id_grado=<?=$asignacione['grado_id'];?>" class="btn btn-primary btn-sm"><i class="bi bi-check2-square"></i> Subir Notas</a></center></td>
                                 </tr>
                                 <?php
                             }

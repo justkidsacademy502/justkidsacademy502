@@ -1,0 +1,38 @@
+#profilePicSelector {
+    width: 150px; /* Ancho pequeño */
+    padding: 8px 12px; /* Espaciado interior */
+    border-radius: 12px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo blanco */
+    font-size: 14px; /* Tamaño de fuente pequeño */
+    font-family: Arial, sans-serif; /* Fuente simple */
+    appearance: none; /* Eliminar estilo predeterminado */
+    cursor: pointer; /* Cursor en forma de mano */
+    transition: border-color 0.3s ease, background-color 0.3s ease; /* Transición suave */
+}
+#profilePicSelector:focus {
+    border-color: #9e37ed; /* Color de borde al enfocar */
+    outline: none; /* Quitar el borde de enfoque predeterminado */
+}
+
+#profilePicSelector option {
+    padding: 10px; /* Espaciado interior de las opciones */
+}
+  
+  .custom-select {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .select-selected {
+    background-color: #f1f1f1;
+  }
+  
+  .select-items div:hover, .select-selected:hover {
+    background-color: #ddd;
+  }
+  
+  #profilePic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }

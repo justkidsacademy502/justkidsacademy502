@@ -270,7 +270,7 @@ CREATE TABLE calificaciones (
     id_calificacion    INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     docente_id         INT (11) NOT NULL,
     estudiante_id      INT (11) NOT NULL,
-    materia_id         INT (11) NOT NULL,
+    grado_id           INT (11) NOT NULL,
     nota1              VARCHAR (20) NOT NULL,
     nota2              VARCHAR (20) NOT NULL,
     nota3              VARCHAR (20) NOT NULL,
@@ -281,7 +281,82 @@ CREATE TABLE calificaciones (
 
     FOREIGN KEY (docente_id) REFERENCES docentes (id_docente)  on delete no action on update cascade,
     FOREIGN KEY (estudiante_id) REFERENCES estudiantes (id_estudiante)  on delete no action on update cascade,
-    FOREIGN KEY (materia_id) REFERENCES materias (id_materia)  on delete no action on update cascade
+    FOREIGN KEY (grado_id) REFERENCES grados (id_grado)  on delete no action on update cascade
+
+    
+
+)ENGINE=InnoDB;
+
+
+
+CREATE TABLE asistencias (
+
+    id_asistencia      INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    docente_id         INT (11) NOT NULL,
+    estudiante_id      INT (11) NOT NULL,
+    grado_id           INT (11) NOT NULL,
+    presente           VARCHAR (50) NOT NULL,
+    fecha_asistencia   VARCHAR (50) NOT NULL,
+   
+    fyh_creacion      DATETIME NULL,
+    fyh_actualizacion DATETIME NULL,
+    estado            VARCHAR (11),
+
+    FOREIGN KEY (docente_id) REFERENCES docentes (id_docente)  on delete no action on update cascade,
+    FOREIGN KEY (estudiante_id) REFERENCES estudiantes (id_estudiante)  on delete no action on update cascade,
+    FOREIGN KEY (grado_id) REFERENCES grados (id_grado)  on delete no action on update cascade
+
+    
+
+)ENGINE=InnoDB;
+
+
+CREATE TABLE permisos (
+
+    id_permiso          INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nombre_url          VARCHAR (150) NOT NULL,
+    url                 text NOT NULL,
+   
+    fyh_creacion      DATETIME NULL,
+    fyh_actualizacion DATETIME NULL,
+    estado            VARCHAR (11)
+
+)ENGINE=InnoDB;
+
+
+
+CREATE TABLE roles_permisos (
+
+    id_rol_permiso      INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+
+    rol_id              INT (11) NOT NULL,
+    permiso_id          INT (11) NOT NULL,
+   
+    fyh_creacion      DATETIME NULL,
+    fyh_actualizacion DATETIME NULL,
+    estado            VARCHAR (11),
+    
+    FOREIGN KEY (rol_id) REFERENCES roles (id_rol)  on delete no action on update cascade,
+    FOREIGN KEY (permiso_id) REFERENCES permisos (id_permiso)  on delete no action on update cascade
+
+)ENGINE=InnoDB;
+
+
+CREATE TABLE observaciones (
+
+    id_observacion     INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    estudiante_id      INT (11) NOT NULL,
+    grado_id           INT (11) NOT NULL,
+    nivel              VARCHAR (50) NOT NULL,
+    bloque             VARCHAR (50) NOT NULL,
+    archivo            VARCHAR(255) NULL,
+   
+    fyh_creacion      DATETIME NULL,
+    fyh_actualizacion DATETIME NULL,
+    estado            VARCHAR (11),
+
+    FOREIGN KEY (estudiante_id) REFERENCES estudiantes (id_estudiante)  on delete no action on update cascade,
+    FOREIGN KEY (grado_id) REFERENCES grados (id_grado)  on delete no action on update cascade
 
     
 
