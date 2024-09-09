@@ -1,0 +1,298 @@
+.hover-enlarge {
+    transition: transform 0.2s ease;
+    /* Suaviza la transición */
+}
+
+.hover-enlarge:hover {
+    transform: scale(1.02);
+    /* Agranda el contenedor en un 2% */
+}
+
+.custom-container {
+    border-radius: 20px;
+}
+
+/* Estilos para el card */
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+    max-height: 330px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.05), -2px -2px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: all 0.3s;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 5px;
+    position: relative;
+    margin: 5px 0px;
+    /* Añadido para espacio entre tarjetas */
+}
+
+.card-image-container {
+    width: 100%;
+    height: 64%;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    background-color: rgb(165, 165, 165);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+}
+
+.video-icon {
+    font-size: 40px;
+}
+
+.card-title {
+    margin: 0;
+    font-size: 17px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: #1797b8;
+    cursor: default;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+}
+
+.card-des {
+    margin: 0;
+    font-size: 13px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: #1797b8;
+    cursor: default;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+}
+
+.card-btn {
+    font-size: 15px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #12bde7;
+    width: 25px;
+    height: 25px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all ease-in-out 0.5s;
+    gap: 1px;
+    box-sizing: border-box;
+    padding-left: 5px;
+    margin-top: 8px;
+}
+
+.card-btn:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    border-radius: 8px;
+    height: 30px;
+    gap: 10px;
+    padding: 0;
+}
+
+.card-btn-text {
+    opacity: 0;
+    font-size: 1px;
+    font-weight: 500;
+    transition: all ease-in-out 0.5s;
+}
+
+.card-btn:hover>.card-btn-text {
+    opacity: 1;
+    font-size: 15px;
+}
+
+/* Estilos para el visor de video */
+.video-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.video-container {
+    position: relative;
+    width: 80vw;
+    max-width: 960px;
+    height: 80vh;
+    max-height: 540px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 40px;
+}
+
+.video-title {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* Encabezado */
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-weight: 500;
+    font-size: 28px;
+    margin-right: 10px;
+}
+
+.header lord-icon {
+    width: 35px;
+    height: 35px;
+}
+
+/* Estilos adaptables para dispositivos más pequeños */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        height: auto;
+        max-height: none;
+        margin: 10px 0;
+        /* Añadido para manejar el espacio entre tarjetas en pantallas más pequeñas */
+    }
+
+    .card-image-container {
+        height: 50%;
+    }
+
+    .video-icon {
+        font-size: 25px;
+    }
+
+    .card-title {
+        font-size: 15px;
+    }
+
+    .card-des {
+        font-size: 11px;
+    }
+
+    .card-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+        padding-left: 10px;
+        margin-top: 5px;
+    }
+
+    .card-btn svg {
+        width: 20px;
+        /* Ajuste el tamaño del SVG en el botón */
+        height: 20px;
+        /* Ajuste el tamaño del SVG en el botón */
+    }
+
+    .card-btn-text {
+        font-size: 12px;
+    }
+
+    .video-container {
+        width: 90vw;
+        height: 70vh;
+        max-height: 70vh;
+        padding-bottom: 0px;
+    }
+
+    .video-title {
+        font-size: 18px;
+    }
+
+    .close-btn {
+        font-size: 20px;
+        top: 5px;
+        right: 5px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .header lord-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Asegurarse de que el SVG dentro de card-btn se vea bien en pantallas pequeñas */
+    .card-btn svg {
+        max-width: 20px;
+        max-height: 20px;
+        /* Asegúrate de que el SVG se ajuste dentro del botón sin perder calidad */
+    }
+}
+
+/* Para pantallas aún más pequeñas */
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .card-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 10px;
+    }
+
+    .card-btn svg {
+        width: 16px;
+        /* Ajuste adicional para pantallas muy pequeñas */
+        height: 16px;
+        /* Ajuste adicional para pantallas muy pequeñas */
+    }
+}

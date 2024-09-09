@@ -37,7 +37,7 @@ include("../layout/parte1.php");
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <img src="../../public/img/Questions.png" width="290px" height="290px" alt="user-avatar" class=" img-fluid">
+                    <img src="../../public/img/letras/Questions.png" width="290px" height="290px" alt="user-avatar" class=" img-fluid">
                 </div>
             </div>
         </div>

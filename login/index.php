@@ -12,6 +12,8 @@ include('../app/config.php');
     <title><?= APP_NAME; ?></title>
     <!-- CSS -->
     <link rel="stylesheet" href="<?= APP_URL; ?>/public/css/login-style.css">
+    <!-- ICono-->
+    <link rel="icon" href="../public/img/icon.ico">
     <!-- Boxicons CSS -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <!-- Sweetalert2 -->

@@ -5,10 +5,21 @@ include("../layout/parte1.php");
 
 ?>
 
+
+<header>
+    <link rel="stylesheet" href="<?= APP_URL; ?>/public/css/home_estudiante.css">
+</header>
+
 <style>
+    /* Estilos para el contenedor de información */
     .info-box {
         transition: transform 0.3s ease;
         /* Transición suave para el efecto */
+        text-align: center;
+        /* Centra el texto dentro del info-box */
+        overflow: hidden;
+        /* Evita que el contenido se desborde del contenedor */
+        cursor: pointer;
     }
 
     .info-box:hover {
@@ -23,6 +34,81 @@ include("../layout/parte1.php");
         /* Heredar el color del texto */
     }
 
+    /* Asegurarse de que el texto se ajuste y no se desborde */
+    .info-box-text {
+        display: block;
+        /* Asegúrate de que el texto sea un bloque para el ajuste */
+        white-space: normal;
+        /* Permite el salto de línea dentro del texto */
+        overflow: hidden;
+        /* Oculta el texto desbordado */
+        text-overflow: ellipsis;
+        /* Agrega puntos suspensivos si el texto es demasiado largo */
+        text-align: center;
+        /* Asegúrate de que el texto esté centrado dentro del contenedor */
+        width: 100%;
+        /* Asegura que el texto ocupe todo el ancho del contenedor */
+    }
+
+    /* Ajustes para pantallas pequeñas */
+    @media (max-width: 767px) {
+        .card-header {
+            display: flex;
+            /* Usa flexbox para centrar el contenido */
+            justify-content: center;
+            /* Centra el título horizontalmente */
+            text-align: center;
+            /* Asegúrate de que el texto esté centrado */
+        }
+
+        .info-box a {
+            /* Estilo del enlace */
+            text-decoration: none;
+            /* Quitar la decoración del enlace */
+            color: inherit;
+            /* Heredar el color del texto */
+            display: flex;
+            /* Utiliza flexbox para el contenido del enlace */
+            flex-direction: column;
+            /* Coloca el contenido del enlace en una columna */
+            align-items: center;
+            /* Centra el contenido del enlace horizontalmente */
+            justify-content: center;
+            /* Centra el contenido del enlace verticalmente */
+            width: 100%;
+            /* Asegura que el enlace ocupe todo el ancho del contenedor */
+
+        }
+
+        .info-box {
+            /* Asegúrate de que el info-box se adapte a pantallas pequeñas */
+            margin: 0 auto;
+            /* Centra el info-box */
+            max-width: 100%;
+            /* Asegúrate de que no se desborde del contenedor */
+            padding: 10px;
+            /* Añade un poco de padding para dispositivos pequeños */
+            display: flex;
+            /* Utiliza flexbox para centrar el contenido */
+            flex-direction: column;
+            /* Coloca el contenido en una columna */
+            align-items: center;
+            /* Centra el contenido horizontalmente */
+            justify-content: center;
+            /* Centra el contenido verticalmente */
+            padding: 10px;
+            /* Añade un poco de espacio interno */
+        }
+
+        .info-box-text {
+            font-size: 14px;
+            /* Ajusta el tamaño del texto si es necesario */
+            padding: 0 10px;
+            /* Añade algo de padding para evitar que el texto llegue al borde */
+        }
+    }
+
+    /* Estilos para el iframe */
     .iframe-container {
         margin-top: 50px;
         width: 100%;
@@ -59,16 +145,20 @@ include("../layout/parte1.php");
     </a>
 
 
-    <center>
-
-
-        <div class="top-image-bxx">
-            <img src="../../public/img/Class_Topics.png" width="390px" height="390px" alt="user-avatar" class=" img-fluid" style="margin-top: 10px;">
+   <center>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <img src="../../public/img/letras/Class_Topics.png" width="390px" height="390px" alt="user-avatar" class=" img-fluid">
+                </div>
+            </div>
         </div>
-
-
     </center>
-<br><br>
+
+
+
+
+    
     <div class="container mt-5" style="margin-top: -30px;">
         <div class="accordion-container">
             <div class="card">
@@ -81,9 +171,9 @@ include("../layout/parte1.php");
                         <div class="col-md-6">
                             <div class="column" id="items-container">
                                 <!-- Items duplicados -->
-                                <div class="col-md-12 item mb-4">
+                                <div class="col-md-12 item mb-4" data-url="https://view.genially.com/66c32478430e6116803f6ff2">
                                     <div class="info-box">
-                                        <a href="#" data-url="https://view.genially.com/66c32478430e6116803f6ff2" style="display: flex; justify-content: center;">
+                                        <a href="#" style="display: flex; justify-content: center;">
                                             <span class="info-box-icon">
                                                 <lord-icon target="div" style="height: 60px; width: 60px;" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/486-school.json">
                                                     <img alt="" loading="lazy" src="https://media.lordicon.com/icons/wired/flat/486-school.svg">
@@ -96,9 +186,9 @@ include("../layout/parte1.php");
                                     </div>
                                 </div>
 
-                                <div class="col-md-12 item mb-4">
+                                <div class="col-md-12 item mb-4" data-url="https://view.genially.com/66b48edd4b2317742c0ea8c0">
                                     <div class="info-box">
-                                        <a href="" data-url="https://view.genially.com/66b48edd4b2317742c0ea8c0" style="display: flex; justify-content: center;">
+                                        <a href="#" data-url="https://view.genially.com/66b48edd4b2317742c0ea8c0" style="display: flex; justify-content: center;">
                                             <span class="info-box-icon">
                                                 <lord-icon target="div" style="height: 60px; width: 60px;" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/771-artist-painting-color-palette.json">
                                                     <img alt="" loading="lazy" src="https://media.lordicon.com/icons/wired/flat/771-artist-painting-color-palette.svg">
@@ -264,7 +354,7 @@ include("../layout/parte2.php");
 </script>
 
 <script>
-    document.querySelectorAll('.info-box a').forEach(link => {
+    document.querySelectorAll('.item').forEach(link => {
         link.addEventListener('click', (event) => {
             event.preventDefault(); // Evita el comportamiento predeterminado del enlace
             const url = link.getAttribute('data-url');

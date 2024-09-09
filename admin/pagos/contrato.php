@@ -119,9 +119,9 @@ Yo <b>'.$nombres_apellidos_ppff.'</b> con número de DPI <b>'.$dpi_ppf.'</b> res
         
 <b>Just Kids Academy</b> es un programa de enseñanza del idioma Inglés dirigido a niños, niñas y adolescentes entre las edades de 4 a 17 años, desglosado de la siguiente manera: <br><br>
 
-<b>Starters:</b> 4 a 7 años (no indispensable poder leer o escribir) <br>
-<b>Explorers:</b> 8 a 12 años (indispensable leer y escribir en un 85%) <br>
-<b>Masters:</b> 13 a 17 años (indispensable leer y escribir en un 85%) <br><br>
+<b>Starters:</b> (no indispensable poder leer o escribir) <br>
+<b>Explorers:</b> (indispensable leer y escribir en un 85%) <br>
+<b>Masters:</b> (indispensable leer y escribir en un 85%) <br><br>
 
 <h4><b>REGLAMENTO INTERNO DE CLASES:</b></h4> <br>
 <b>1.</b> Es responsabilidad de él o la estudiante estar siempre a tiempo a la hora de inicio de la clase, él alumno puede ingresar a su clase hasta 5 minutos antes. <br>

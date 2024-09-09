@@ -23,7 +23,7 @@ include("../../app/controllers/pagos/datos_pagos_estudiantes.php");
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <img src="../../public/img/Constancias.png" width="390px" height="390px" alt="user-avatar" class=" img-fluid">
+                    <img src="../../public/img/letras/Constancias.png" width="390px" height="390px" alt="user-avatar" class=" img-fluid">
                 </div>
             </div>
         </div>

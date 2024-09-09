@@ -34,7 +34,7 @@ include("../../app/controllers/calificaciones/listado_de_calificaciones.php");
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <img src="../../public/img/My_score.png" width="250px" height="250px" alt="user-avatar" class=" img-fluid">
+                    <img src="../../public/img/letras/My_score.png" width="250px" height="250px" alt="user-avatar" class=" img-fluid">
                 </div>
             </div>
         </div>
@@ -47,17 +47,17 @@ include("../../app/controllers/calificaciones/listado_de_calificaciones.php");
                     <br>
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <img id="profilePic" src="../../public/img/img6.png" alt="Profile Picture">
+                            <img id="profilePic" src="../../public/img/personajes/img6.png" alt="Profile Picture">
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col-12 text-center">
                             <select id="profilePicSelector" class="custom-select text-center">
-                                <option value="../../public/img/img5.png" data-img="../../public/img/img5.png">Milaneso</option>
-                                <option value="../../public/img/img4.png" data-img="../../public/img/img4.png">Milaneso</option>
-                                <option value="../../public/img/img7.png" data-img="../../public/img/img7.png">Milaneso</option>
-                                <option value="../../public/img/milaneso.png" data-img="../../public/img/milaneso.png">Milaneso</option>
+                                <option value="../../public/img/personajes/img5.png" data-img="../../public/personajes/img/img5.png">Milaneso</option>
+                                <option value="../../public/img/personajes/img4.png" data-img="../../public/img/personajes/img4.png">Milaneso</option>
+                                <option value="../../public/img/personajes/img7.png" data-img="../../public/img/personajes/img7.png">Milaneso</option>
+                                <option value="../../public/img/personajes/milaneso.png" data-img="../../public/img/personajes/milaneso.png">Milaneso</option>
                             </select>
                         </div>
                     </div>

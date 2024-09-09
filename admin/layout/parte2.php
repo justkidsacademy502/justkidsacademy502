@@ -3,7 +3,6 @@
     integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw=="
     crossorigin="anonymous"></script>
 <script src="<?= APP_URL; ?>/public/js/script_principal.js"></script>
-<script src="<?= APP_URL; ?>/public/js/student_home.js"></script>
 <script src="<?= APP_URL; ?>/public/js/myscore_script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.11/lottie.min.js"></script>
 

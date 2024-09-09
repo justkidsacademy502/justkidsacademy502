@@ -18,7 +18,7 @@ $bloques = $_POST['bloque'];
 $files = $_FILES['files'];
 
 // Directorio para almacenar archivos PDF
-$upload_dir = __DIR__ . '/../../../public/pdf/';
+$upload_dir = __DIR__ . '/../../../public/pdf/observaciones/';
 
 // Preparar la sentencia SQL una vez
 $sentencia = $pdo->prepare('

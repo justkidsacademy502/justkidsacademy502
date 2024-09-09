@@ -109,6 +109,8 @@ if (isset($_SESSION['sesion_email'])) {
             calendar.render();
         });
     </script>
+    <!-- ICono-->
+    <link rel="icon" href="../../public/img/icon.ico">
 
     <!-- jQuery -->
     <script src="<?= APP_URL; ?>/public/plugins/jquery/jquery.min.js"></script>
@@ -117,7 +119,6 @@ if (isset($_SESSION['sesion_email'])) {
     <!-- STYLESHEET -->
     <link rel="stylesheet" href="<?= APP_URL; ?>../public/dist/css/adminlte.min.css">
     <link rel="stylesheet" href="<?= APP_URL; ?>/public/css/sidebar_page.css">
-    <link rel="stylesheet" href="<?= APP_URL; ?>/public/css/home_estudiante.css">
     <link rel="stylesheet" href="<?= APP_URL; ?>/public/css/myscore_estilos.css">
 
     <!-- Data Tables -->
@@ -246,6 +247,15 @@ if (isset($_SESSION['sesion_email'])) {
                                     <img alt="" loading="lazy" src="https://media.lordicon.com/icons/wired/flat/424-question-bubble.svg">
                                 </lord-icon>
                                 <span class="custom-text">Questions</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="<?= APP_URL; ?>/admin/pagos/contrato.php?id=<?= $id_estudiante; ?>" target="_blank">
+                                <lord-icon target="a" style="height:30px;width:30px;" trigger="hover" src="https://media.lordicon.com/icons/wired/flat/1019-document-signature-hand.json">
+                                    <img alt="" loading="lazy" src="https://media.lordicon.com/icons/wired/flat/1019-document-signature-hand.svg">
+                                </lord-icon>
+                                <span class="custom-text">Terms and conditions</span>
                             </a>
                         </li>
 

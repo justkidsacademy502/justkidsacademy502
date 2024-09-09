@@ -361,3 +361,23 @@ CREATE TABLE observaciones (
     
 
 )ENGINE=InnoDB;
+
+
+CREATE TABLE diplomas (
+
+    id_diploma         INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    estudiante_id      INT (11) NOT NULL,
+    grado_id           INT (11) NOT NULL,
+    nivel              VARCHAR (50) NOT NULL,
+    archivo            VARCHAR(255) NULL,
+   
+    fyh_creacion      DATETIME NULL,
+    fyh_actualizacion DATETIME NULL,
+    estado            VARCHAR (11),
+
+    FOREIGN KEY (estudiante_id) REFERENCES estudiantes (id_estudiante)  on delete no action on update cascade,
+    FOREIGN KEY (grado_id) REFERENCES grados (id_grado)  on delete no action on update cascade
+
+    
+
+)ENGINE=InnoDB;
